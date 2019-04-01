@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		8D29220E22460A790046917F /* Stepippo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stepippo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D29221122460A790046917F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8D29221322460A790046917F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../ViewController.swift; sourceTree = "<group>"; };
+		8D29221322460A790046917F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift/ViewController.swift; sourceTree = "<group>"; };
 		8D29221622460A790046917F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D29221822460A7F0046917F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		8D29221B22460A7F0046917F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,47 +35,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0BBD187D22511A780039413F /* New Group */ = {
+		0BBD187D22511A780039413F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0BBD188022511B3C0039413F /* New Group2 */,
-				0BBD187F22511AF20039413F /* New Group1 */,
-				0BBD187E22511A900039413F /* New Group */,
+				0BBD188022511B3C0039413F /* Models */,
+				0BBD187F22511AF20039413F /* Views */,
+				0BBD187E22511A900039413F /* Controllers */,
 			);
-			path = "New Group";
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		0BBD187E22511A900039413F /* New Group */ = {
+		0BBD187E22511A900039413F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				8D29221322460A790046917F /* ViewController.swift */,
 			);
-			path = "New Group";
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		0BBD187F22511AF20039413F /* New Group1 */ = {
+		0BBD187F22511AF20039413F /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				8D29221522460A790046917F /* Main.storyboard */,
 				8D29221A22460A7F0046917F /* LaunchScreen.storyboard */,
 			);
-			path = "New Group1";
+			path = Views;
 			sourceTree = "<group>";
 		};
-		0BBD188022511B3C0039413F /* New Group2 */ = {
+		0BBD188022511B3C0039413F /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "New Group2";
+			path = Models;
 			sourceTree = "<group>";
 		};
-		0BBD188122511B590039413F /* New Group1 */ = {
+		0BBD188122511B590039413F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				8D29221D22460A7F0046917F /* Info.plist */,
 				8D29221822460A7F0046917F /* Assets.xcassets */,
 			);
-			path = "New Group1";
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		8D29220522460A790046917F = {
@@ -97,9 +97,9 @@
 		8D29221022460A790046917F /* Stepippo */ = {
 			isa = PBXGroup;
 			children = (
-				0BBD187D22511A780039413F /* New Group */,
+				0BBD187D22511A780039413F /* Classes */,
 				8D29221122460A790046917F /* AppDelegate.swift */,
-				0BBD188122511B590039413F /* New Group1 */,
+				0BBD188122511B590039413F /* Resources */,
 			);
 			path = Stepippo;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8PW2QDU8DF;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Stepippo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,7 +341,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8PW2QDU8DF;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Stepippo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

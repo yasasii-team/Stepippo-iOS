@@ -3,7 +3,7 @@ name: 機能追加・改善
 about: 機能追加・改善のテンプレート
 title: ''
 labels: enhancement(機能)
-assignees: YamaTatsu10969
+assignees: ''
 
 ---
 

@@ -16,7 +16,7 @@
 
 /* Begin PBXFileReference section */
 		8D29220E22460A790046917F /* Stepippo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stepippo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D29221122460A790046917F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8D29221122460A790046917F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 		8D29221322460A790046917F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8D29221622460A790046917F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D29221822460A7F0046917F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,6 +35,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B2ED57522579E2B00C98944 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0BD30D5B2257A04600C700C8 /* Models */,
+				0BD30D5A2257A01800C700C8 /* Controllers */,
+				0B2ED57722579E9C00C98944 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0B2ED57622579E5700C98944 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D29221822460A7F0046917F /* Assets.xcassets */,
+				8D29221D22460A7F0046917F /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0B2ED57722579E9C00C98944 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8D29221522460A790046917F /* Main.storyboard */,
+				8D29221A22460A7F0046917F /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0BD30D5A2257A01800C700C8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D29221322460A790046917F /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0BD30D5B2257A04600C700C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		8D29220522460A790046917F = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +97,9 @@
 		8D29221022460A790046917F /* Stepippo */ = {
 			isa = PBXGroup;
 			children = (
+				0B2ED57522579E2B00C98944 /* Classes */,
 				8D29221122460A790046917F /* AppDelegate.swift */,
-				8D29221322460A790046917F /* ViewController.swift */,
-				8D29221522460A790046917F /* Main.storyboard */,
-				8D29221822460A7F0046917F /* Assets.xcassets */,
-				8D29221A22460A7F0046917F /* LaunchScreen.storyboard */,
-				8D29221D22460A7F0046917F /* Info.plist */,
+				0B2ED57622579E5700C98944 /* Resources */,
 			);
 			path = Stepippo;
 			sourceTree = "<group>";

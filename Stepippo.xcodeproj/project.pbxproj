@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B021194225B971C00A8C1EA /* ProgCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B021193225B971C00A8C1EA /* ProgCell.xib */; };
+		0B021196225B97B300A8C1EA /* Prog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B021195225B97B300A8C1EA /* Prog.storyboard */; };
+		0B021198225B981F00A8C1EA /* ProgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B021197225B981F00A8C1EA /* ProgVC.swift */; };
+		0B02119A225B984200A8C1EA /* ProgCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B021199225B984200A8C1EA /* ProgCell.swift */; };
 		8D071CB7225A4435004A4A69 /* Misc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D071CB6225A4435004A4A69 /* Misc.storyboard */; };
 		8D071CBA225A44CE004A4A69 /* MiscCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D071CB8225A44CE004A4A69 /* MiscCell.swift */; };
 		8D071CBB225A44CE004A4A69 /* MiscCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D071CB9225A44CE004A4A69 /* MiscCell.xib */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B021193225B971C00A8C1EA /* ProgCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgCell.xib; sourceTree = "<group>"; };
+		0B021195225B97B300A8C1EA /* Prog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Prog.storyboard; sourceTree = "<group>"; };
+		0B021197225B981F00A8C1EA /* ProgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgVC.swift; sourceTree = "<group>"; };
+		0B021199225B984200A8C1EA /* ProgCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgCell.swift; sourceTree = "<group>"; };
 		8D071CB6225A4435004A4A69 /* Misc.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Misc.storyboard; sourceTree = "<group>"; };
 		8D071CB8225A44CE004A4A69 /* MiscCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscCell.swift; sourceTree = "<group>"; };
 		8D071CB9225A44CE004A4A69 /* MiscCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiscCell.xib; sourceTree = "<group>"; };
@@ -69,6 +77,8 @@
 				8D29221A22460A7F0046917F /* LaunchScreen.storyboard */,
 				8D071CB6225A4435004A4A69 /* Misc.storyboard */,
 				8D071CB9225A44CE004A4A69 /* MiscCell.xib */,
+				0B021193225B971C00A8C1EA /* ProgCell.xib */,
+				0B021195225B97B300A8C1EA /* Prog.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -79,6 +89,8 @@
 				8D29221322460A790046917F /* ViewController.swift */,
 				8D071CBC225A44FC004A4A69 /* MiscVC.swift */,
 				8D071CB8225A44CE004A4A69 /* MiscCell.swift */,
+				0B021197225B981F00A8C1EA /* ProgVC.swift */,
+				0B021199225B984200A8C1EA /* ProgCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -178,7 +190,9 @@
 				8D071CBB225A44CE004A4A69 /* MiscCell.xib in Resources */,
 				8D29221C22460A7F0046917F /* LaunchScreen.storyboard in Resources */,
 				8D29221922460A7F0046917F /* Assets.xcassets in Resources */,
+				0B021194225B971C00A8C1EA /* ProgCell.xib in Resources */,
 				8D071CB7225A4435004A4A69 /* Misc.storyboard in Resources */,
+				0B021196225B97B300A8C1EA /* Prog.storyboard in Resources */,
 				8D29221722460A790046917F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,7 +205,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D071CBD225A44FC004A4A69 /* MiscVC.swift in Sources */,
+				0B02119A225B984200A8C1EA /* ProgCell.swift in Sources */,
 				8D29221422460A790046917F /* ViewController.swift in Sources */,
+				0B021198225B981F00A8C1EA /* ProgVC.swift in Sources */,
 				8D29221222460A790046917F /* AppDelegate.swift in Sources */,
 				8D071CBA225A44CE004A4A69 /* MiscCell.swift in Sources */,
 			);

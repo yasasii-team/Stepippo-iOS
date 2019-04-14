@@ -11,6 +11,8 @@
 		8D071CBA225A44CE004A4A69 /* MiscCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D071CB8225A44CE004A4A69 /* MiscCell.swift */; };
 		8D071CBB225A44CE004A4A69 /* MiscCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D071CB9225A44CE004A4A69 /* MiscCell.xib */; };
 		8D071CBD225A44FC004A4A69 /* MiscVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D071CBC225A44FC004A4A69 /* MiscVC.swift */; };
+		8D0B3A0522625C0900B71A7C /* SelectableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B3A0322625C0900B71A7C /* SelectableCell.swift */; };
+		8D0B3A0622625C0900B71A7C /* SelectableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D0B3A0422625C0900B71A7C /* SelectableCell.xib */; };
 		8D29221222460A790046917F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D29221122460A790046917F /* AppDelegate.swift */; };
 		8D29221422460A790046917F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D29221322460A790046917F /* ViewController.swift */; };
 		8D29221722460A790046917F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D29221522460A790046917F /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 		8D071CB8225A44CE004A4A69 /* MiscCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscCell.swift; sourceTree = "<group>"; };
 		8D071CB9225A44CE004A4A69 /* MiscCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiscCell.xib; sourceTree = "<group>"; };
 		8D071CBC225A44FC004A4A69 /* MiscVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscVC.swift; sourceTree = "<group>"; };
+		8D0B3A0322625C0900B71A7C /* SelectableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCell.swift; sourceTree = "<group>"; };
+		8D0B3A0422625C0900B71A7C /* SelectableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectableCell.xib; sourceTree = "<group>"; };
 		8D29220E22460A790046917F /* Stepippo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stepippo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D29221122460A790046917F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 		8D29221322460A790046917F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,9 @@
 				8D29221A22460A7F0046917F /* LaunchScreen.storyboard */,
 				8D071CB6225A4435004A4A69 /* Misc.storyboard */,
 				8D071CB9225A44CE004A4A69 /* MiscCell.xib */,
+				8D071CB8225A44CE004A4A69 /* MiscCell.swift */,
+				8D0B3A0422625C0900B71A7C /* SelectableCell.xib */,
+				8D0B3A0322625C0900B71A7C /* SelectableCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -78,7 +85,6 @@
 			children = (
 				8D29221322460A790046917F /* ViewController.swift */,
 				8D071CBC225A44FC004A4A69 /* MiscVC.swift */,
-				8D071CB8225A44CE004A4A69 /* MiscCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -176,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D071CBB225A44CE004A4A69 /* MiscCell.xib in Resources */,
+				8D0B3A0622625C0900B71A7C /* SelectableCell.xib in Resources */,
 				8D29221C22460A7F0046917F /* LaunchScreen.storyboard in Resources */,
 				8D29221922460A7F0046917F /* Assets.xcassets in Resources */,
 				8D071CB7225A4435004A4A69 /* Misc.storyboard in Resources */,
@@ -191,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D071CBD225A44FC004A4A69 /* MiscVC.swift in Sources */,
+				8D0B3A0522625C0900B71A7C /* SelectableCell.swift in Sources */,
 				8D29221422460A790046917F /* ViewController.swift in Sources */,
 				8D29221222460A790046917F /* AppDelegate.swift in Sources */,
 				8D071CBA225A44CE004A4A69 /* MiscCell.swift in Sources */,

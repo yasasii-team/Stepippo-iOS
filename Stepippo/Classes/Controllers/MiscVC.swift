@@ -8,10 +8,206 @@
 
 import UIKit
 
+/// その他、設定などの雑多なことを請け負う画面
 final class MiscVC: UIViewController {
-
+    
+    // MARK: IBOutlet properties
+    @IBOutlet weak var tableView: UITableView!
+    
+    // MARK: IBAction methods
+    
+    // MARK: Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "その他"
+        // Cellに使うXibファイル
+        tableView.register(UINib(nibName: "MiscCell", bundle: nil), forCellReuseIdentifier: "miscCell")
+        tableView.register(UINib(nibName: "SelectableCell", bundle: nil), forCellReuseIdentifier: "selectableCell")
+    }
+}
+
+// MARK: - Private fields
+private extension MiscVC {
+    
+    // MARK: Private Enum
+    private enum Section: Int, CaseIterable {
+        
+        case setting
+        case aboutThisApp
+        
+        enum Setting: Int, CaseIterable {
+            case firstViewOfIppoList
+            case timeToStart
+            case dayOfWeekToStart
+            case dateToStart
+        }
+        
+        enum AboutThisApp: Int, CaseIterable {
+            case reviewOnAppStore
+            case browseRepository
+            case featureRequest
+            case bugReport
+            case AboutYasasiiKai
+        }
     }
 
+    // MARK: Private properties
+    
+    // MARK: Private methods
+    
+}
+
+// MARK: - TableView data source
+extension MiscVC: UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return Section.allCases.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch Section(rawValue: section)! {
+        case .setting:
+            return Section.Setting.allCases.count
+            
+        case .aboutThisApp:
+            return Section.AboutThisApp.allCases.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        guard let section = Section(rawValue: section) else { return nil }
+        
+        switch section {
+        case .setting:
+            return "ユーザー設定"
+            
+        case .aboutThisApp:
+            return "このアプリについて"
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        
+        guard let section = Section(rawValue: section) else { return nil }
+        
+        switch section {
+        case .setting:
+            return "アプリを削除すると設定も削除されます"
+            
+        case .aboutThisApp:
+            return "Steppipo (v1.0.0) Developed by やさしい会 iOSチーム"
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let userDefault = UserDefaults.standard
+
+        guard let section = Section(rawValue: indexPath.section) else {
+            fatalError("存在しないセクションを表示しようとしています")
+        }
+        
+        switch section {
+        // MARK: Setting section
+        case .setting:
+            
+            guard let row = Section.Setting(rawValue: indexPath.row) else {
+                fatalError("存在しない行を表示しようとしています")
+            }
+            
+            switch row {
+            case .firstViewOfIppoList:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "selectableCell", for: indexPath) as! SelectableCell
+                cell.iconImage.image = #imageLiteral(resourceName: "TaskCompleted")
+                cell.titleLabel.text = "最初に表示するIppo"
+                cell.segmentedControl.setTitle("達成済み", forSegmentAt: 0)
+                cell.segmentedControl.setTitle("ストック", forSegmentAt: 1)
+                // UserDefaultsに記憶している設定を使用
+                if let selectedSegment = userDefault.string(forKey: "firstViewOfIppoList") {
+                    cell.segmentedControl.selectedSegmentIndex = selectedSegment == "達成済み" ? 0 : 1
+                }
+                return cell
+
+            case .timeToStart:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "miscCell", for: indexPath) as! MiscCell
+                cell.iconImage.image = #imageLiteral(resourceName: "24Times")
+                cell.titleLabel.text = "1日の開始時間"
+                // UserDefaultsに記憶している設定を使用
+                cell.detailLabel.text = userDefault.string(forKey: "timeToStart") ?? "0:00"
+                return cell
+
+            case .dayOfWeekToStart:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "miscCell", for: indexPath) as! MiscCell
+                cell.iconImage.image = #imageLiteral(resourceName: "DayOfWeekToStart")
+                cell.titleLabel.text = "週の開始曜日"
+                // UserDefaultsに記憶している設定を使用
+                cell.detailLabel.text = userDefault.string(forKey: "dayOfWeekToStart") ?? "月曜日"
+                return cell
+
+            case .dateToStart:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "miscCell", for: indexPath) as! MiscCell
+                cell.iconImage.image = #imageLiteral(resourceName: "DateToStart")
+                cell.titleLabel.text = "月の開始日"
+                // UserDefaultsに記憶している設定を使用
+                cell.detailLabel.text = userDefault.string(forKey: "dateToStart") ?? "1日"
+                return cell
+            }
+            
+        // MARK: AboutThisApp section
+        case .aboutThisApp:
+            
+            guard let row = MiscVC.Section.AboutThisApp(rawValue: indexPath.row) else {
+                fatalError("存在しない行を表示しようとしています")
+            }
+            
+            switch row {
+            case .reviewOnAppStore:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "miscCell", for: indexPath) as! MiscCell
+                cell.iconImage.image = #imageLiteral(resourceName: "StarOnBoard")
+                cell.titleLabel.text = "AppStoreで評価する"
+                cell.detailLabel.text = "❤️"
+                cell.detailLabel.textColor = .orange
+                return cell
+
+            case .browseRepository:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "miscCell", for: indexPath) as! MiscCell
+                cell.iconImage.image = #imageLiteral(resourceName: "Github")
+                cell.titleLabel.text = "開発リポジトリを見る"
+                cell.detailLabel.text = nil
+               return cell
+
+            case .featureRequest:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "miscCell", for: indexPath) as! MiscCell
+                cell.iconImage.image = #imageLiteral(resourceName: "RequestService")
+                cell.titleLabel.text = "機能のリクエスト"
+                // UserDefaultsに記憶している機能リクエストの件数を使用
+                cell.detailLabel.text = userDefault.string(forKey: "requestedFeatures")
+                return cell
+
+            case .bugReport:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "miscCell", for: indexPath) as! MiscCell
+                cell.iconImage.image = #imageLiteral(resourceName: "SmartphoneBug")
+                cell.titleLabel.text = "不具合の報告"
+                // UserDefaultsに記憶している報告済みのバグ件数を使用
+                cell.detailLabel.text = userDefault.string(forKey: "reportedBugs")
+                return cell
+
+            case .AboutYasasiiKai:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "miscCell", for: indexPath) as! MiscCell
+                cell.iconImage.image = #imageLiteral(resourceName: "YasasiiKaiLogo")
+                cell.titleLabel.text = "やさしい会について"
+                cell.detailLabel.text = "詳しく知る"
+                return cell
+            }
+        }
+    }
+}
+
+// MARK: - TableView delegate
+extension MiscVC: UITableViewDelegate {
+    // セルを選択した時
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TODO: Webに飛んだり、色々と仕掛ける
+    }
 }

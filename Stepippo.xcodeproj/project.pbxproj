@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67920DB02262C2D200127083 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67920DAF2262C2D100127083 /* XLPagerTabStrip.framework */; };
 		8D071CB7225A4435004A4A69 /* Misc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D071CB6225A4435004A4A69 /* Misc.storyboard */; };
 		8D071CBA225A44CE004A4A69 /* MiscCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D071CB8225A44CE004A4A69 /* MiscCell.swift */; };
 		8D071CBB225A44CE004A4A69 /* MiscCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D071CB9225A44CE004A4A69 /* MiscCell.xib */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67920DAF2262C2D100127083 /* XLPagerTabStrip.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XLPagerTabStrip.framework; path = Carthage/Build/iOS/XLPagerTabStrip.framework; sourceTree = "<group>"; };
 		8D071CB6225A4435004A4A69 /* Misc.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Misc.storyboard; sourceTree = "<group>"; };
 		8D071CB8225A44CE004A4A69 /* MiscCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscCell.swift; sourceTree = "<group>"; };
 		8D071CB9225A44CE004A4A69 /* MiscCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiscCell.xib; sourceTree = "<group>"; };
@@ -37,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67920DB02262C2D200127083 /* XLPagerTabStrip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,11 +93,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		67920DAC2262BF6300127083 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67920DAF2262C2D100127083 /* XLPagerTabStrip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8D29220522460A790046917F = {
 			isa = PBXGroup;
 			children = (
 				8D29221022460A790046917F /* Stepippo */,
 				8D29220F22460A790046917F /* Products */,
+				67920DAC2262BF6300127083 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +138,7 @@
 				8D29220A22460A790046917F /* Sources */,
 				8D29220B22460A790046917F /* Frameworks */,
 				8D29220C22460A790046917F /* Resources */,
+				67920DB12263531E00127083 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -184,6 +197,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67920DB12263531E00127083 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/XLPagerTabStrip.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D29220A22460A790046917F /* Sources */ = {
@@ -341,6 +375,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Stepippo/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -359,6 +397,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Stepippo/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

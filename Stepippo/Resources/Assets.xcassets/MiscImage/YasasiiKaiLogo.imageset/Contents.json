@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "やさしいロゴ（仮）.png",
+      "filename" : "yasasiiKaiLogo-kari25.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "yasasiiKaiLogo-kari50.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "yasasiiKaiLogo-kari.png",
       "scale" : "3x"
     }
   ],

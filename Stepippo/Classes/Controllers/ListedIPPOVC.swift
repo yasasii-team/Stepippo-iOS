@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ListedIPPOVC: UIViewController {
+final class ListedIPPOVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

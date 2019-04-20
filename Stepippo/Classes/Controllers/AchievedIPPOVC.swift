@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AchievedIPPOVC: UIViewController {
+final class AchievedIPPOVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

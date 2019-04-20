@@ -14,6 +14,9 @@ final class MiscVC: UIViewController {
     // MARK: IBOutlet properties
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: Properties
+    let userDefault = UserDefaults.standard
+
     // MARK: IBAction methods
     
     // MARK: Life cycle methods
@@ -50,11 +53,6 @@ private extension MiscVC {
             case AboutYasasiiKai
         }
     }
-
-    // MARK: Private properties
-    
-    // MARK: Private methods
-    
 }
 
 // MARK: - TableView data source
@@ -102,8 +100,6 @@ extension MiscVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let userDefault = UserDefaults.standard
-
         guard let section = Section(rawValue: indexPath.section) else {
             fatalError("存在しないセクションを表示しようとしています")
         }
@@ -206,8 +202,82 @@ extension MiscVC: UITableViewDataSource {
 
 // MARK: - TableView delegate
 extension MiscVC: UITableViewDelegate {
-    // セルを選択した時
+    /// セルを選択した時
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: Webに飛んだり、色々と仕掛ける
+
+        let cell = tableView.cellForRow(at: indexPath) as! MiscCell
+
+        guard let section = Section(rawValue: indexPath.section) else {
+            fatalError("存在しないセクション")
+        }
+        
+        switch section {
+        // MARK: Setting section
+        case .setting:
+            
+            guard let row = Section.Setting(rawValue: indexPath.row) else {
+                fatalError("存在しない行")
+            }
+            
+            switch row {
+            case .firstViewOfIppoList: break
+            case .timeToStart:
+                // TODO: 時間を設定する
+                break
+                
+            case .dayOfWeekToStart:
+                // 選択肢から選択してActionSheetが閉じ切ってからLabelの文字が変わるので一時的に非表示にしておく
+                cell.detailLabel.isHidden = true
+                let alert = UIAlertController(title: "何曜日からスタートしますか？",
+                                              message: "期限を1週間とした時の基準となる曜日を選択してください",
+                                              preferredStyle: .actionSheet)
+                
+                let weeks = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日", "日曜日"]
+                
+                for week in weeks {
+                    alert.addAction(UIAlertAction(title: week, style: .default) { [weak self] _ in
+                        // 選択した曜日を記憶
+                        self?.userDefault.set(week, forKey: "dayOfWeekToStart")
+                        cell.detailLabel.text = week
+                        cell.detailLabel.isHidden = false
+                    })
+                }
+                
+                alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel){ _ in
+                    cell.detailLabel.isHidden = false
+                })
+                
+                self.present(alert, animated: true, completion: nil)
+                
+            case .dateToStart:
+                // TODO: カレンダーから選択する？
+                break
+            }
+            
+        // MARK: AboutThisApp section
+        case .aboutThisApp:
+            
+            guard let row = MiscVC.Section.AboutThisApp(rawValue: indexPath.row) else {
+                fatalError("存在しない行")
+            }
+            
+            switch row {
+            case .reviewOnAppStore:
+                // TODO: App Storeを表示する
+                break
+            case .browseRepository:
+                // TODO: リポジトリをWKWebViewで表示する
+                break
+            case .featureRequest:
+                // TODO: エンハンスIssueを見て、投稿もできる
+                break
+            case .bugReport:
+                // TODO: バグIssueを見れて、投稿もできる
+                break
+            case .AboutYasasiiKai:
+                // TODO: 詳細画面へ遷移する
+                break
+            }
+        }
     }
 }

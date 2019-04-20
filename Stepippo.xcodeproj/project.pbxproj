@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B9ED7322269B68A004EEA74 /* ProgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9ED7302269B68A004EEA74 /* ProgVC.swift */; };
-		0B9ED7332269B68A004EEA74 /* ProgVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9ED7312269B68A004EEA74 /* ProgVC.xib */; };
-		0B9ED7352269B6C1004EEA74 /* Prog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B9ED7342269B6C1004EEA74 /* Prog.storyboard */; };
 		8D071CB7225A4435004A4A69 /* Misc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D071CB6225A4435004A4A69 /* Misc.storyboard */; };
 		8D071CBA225A44CE004A4A69 /* MiscCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D071CB8225A44CE004A4A69 /* MiscCell.swift */; };
 		8D071CBB225A44CE004A4A69 /* MiscCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D071CB9225A44CE004A4A69 /* MiscCell.xib */; };
 		8D071CBD225A44FC004A4A69 /* MiscVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D071CBC225A44FC004A4A69 /* MiscVC.swift */; };
 		8D0B3A0522625C0900B71A7C /* SelectableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B3A0322625C0900B71A7C /* SelectableCell.swift */; };
 		8D0B3A0622625C0900B71A7C /* SelectableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D0B3A0422625C0900B71A7C /* SelectableCell.xib */; };
+		8D0B3A0A22676ACE00B71A7C /* GoalSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D0B3A0922676ACE00B71A7C /* GoalSetting.storyboard */; };
+		8D0B3A0C22676AF900B71A7C /* GoalSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B3A0B22676AF900B71A7C /* GoalSettingVC.swift */; };
 		8D29221222460A790046917F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D29221122460A790046917F /* AppDelegate.swift */; };
 		8D29221422460A790046917F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D29221322460A790046917F /* ViewController.swift */; };
 		8D29221722460A790046917F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D29221522460A790046917F /* Main.storyboard */; };
@@ -24,15 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B9ED7302269B68A004EEA74 /* ProgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgVC.swift; sourceTree = "<group>"; };
-		0B9ED7312269B68A004EEA74 /* ProgVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ProgVC.xib; path = ../Controllers/ProgVC.xib; sourceTree = "<group>"; };
-		0B9ED7342269B6C1004EEA74 /* Prog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Prog.storyboard; sourceTree = "<group>"; };
 		8D071CB6225A4435004A4A69 /* Misc.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Misc.storyboard; sourceTree = "<group>"; };
 		8D071CB8225A44CE004A4A69 /* MiscCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscCell.swift; sourceTree = "<group>"; };
 		8D071CB9225A44CE004A4A69 /* MiscCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiscCell.xib; sourceTree = "<group>"; };
 		8D071CBC225A44FC004A4A69 /* MiscVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscVC.swift; sourceTree = "<group>"; };
 		8D0B3A0322625C0900B71A7C /* SelectableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableCell.swift; sourceTree = "<group>"; };
 		8D0B3A0422625C0900B71A7C /* SelectableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectableCell.xib; sourceTree = "<group>"; };
+		8D0B3A0922676ACE00B71A7C /* GoalSetting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GoalSetting.storyboard; sourceTree = "<group>"; };
+		8D0B3A0B22676AF900B71A7C /* GoalSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSettingVC.swift; sourceTree = "<group>"; };
 		8D29220E22460A790046917F /* Stepippo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stepippo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D29221122460A790046917F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
 		8D29221322460A790046917F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67920DB02262C2D200127083 /* XLPagerTabStrip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,13 +76,12 @@
 			children = (
 				8D29221522460A790046917F /* Main.storyboard */,
 				8D29221A22460A7F0046917F /* LaunchScreen.storyboard */,
+				8D0B3A0922676ACE00B71A7C /* GoalSetting.storyboard */,
 				8D071CB6225A4435004A4A69 /* Misc.storyboard */,
 				8D071CB9225A44CE004A4A69 /* MiscCell.xib */,
 				8D071CB8225A44CE004A4A69 /* MiscCell.swift */,
 				8D0B3A0422625C0900B71A7C /* SelectableCell.xib */,
 				8D0B3A0322625C0900B71A7C /* SelectableCell.swift */,
-				0B9ED7342269B6C1004EEA74 /* Prog.storyboard */,
-				0B9ED7312269B68A004EEA74 /* ProgVC.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -92,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				8D29221322460A790046917F /* ViewController.swift */,
+				8D0B3A0B22676AF900B71A7C /* GoalSettingVC.swift */,
 				8D071CBC225A44FC004A4A69 /* MiscVC.swift */,
-				0B9ED7302269B68A004EEA74 /* ProgVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -105,11 +103,20 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		67920DAC2262BF6300127083 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				67920DAF2262C2D100127083 /* XLPagerTabStrip.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8D29220522460A790046917F = {
 			isa = PBXGroup;
 			children = (
 				8D29221022460A790046917F /* Stepippo */,
 				8D29220F22460A790046917F /* Products */,
+				67920DAC2262BF6300127083 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +148,7 @@
 				8D29220A22460A790046917F /* Sources */,
 				8D29220B22460A790046917F /* Frameworks */,
 				8D29220C22460A790046917F /* Resources */,
+				67920DB12263531E00127083 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -190,7 +198,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6788A274226A0F1400E9B0D5 /* ListedIPPO.storyboard in Resources */,
 				8D071CBB225A44CE004A4A69 /* MiscCell.xib in Resources */,
+				6788A278226A0F2B00E9B0D5 /* StockedIPPO.storyboard in Resources */,
 				8D0B3A0622625C0900B71A7C /* SelectableCell.xib in Resources */,
 				8D29221C22460A7F0046917F /* LaunchScreen.storyboard in Resources */,
 				8D29221922460A7F0046917F /* Assets.xcassets in Resources */,
@@ -198,10 +208,33 @@
 				0B9ED7332269B68A004EEA74 /* ProgVC.xib in Resources */,
 				0B9ED7352269B6C1004EEA74 /* Prog.storyboard in Resources */,
 				8D29221722460A790046917F /* Main.storyboard in Resources */,
+				6788A276226A0F2100E9B0D5 /* AchievedIPPO.storyboard in Resources */,
+				8D0B3A0A22676ACE00B71A7C /* GoalSetting.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67920DB12263531E00127083 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/XLPagerTabStrip.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D29220A22460A790046917F /* Sources */ = {
@@ -209,10 +242,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D071CBD225A44FC004A4A69 /* MiscVC.swift in Sources */,
+				6788A26E226A0ED000E9B0D5 /* ListedIPPOVC.swift in Sources */,
 				8D0B3A0522625C0900B71A7C /* SelectableCell.swift in Sources */,
-				0B9ED7322269B68A004EEA74 /* ProgVC.swift in Sources */,
 				8D29221422460A790046917F /* ViewController.swift in Sources */,
 				8D29221222460A790046917F /* AppDelegate.swift in Sources */,
+				8D0B3A0C22676AF900B71A7C /* GoalSettingVC.swift in Sources */,
 				8D071CBA225A44CE004A4A69 /* MiscCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +395,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Stepippo/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -379,6 +417,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Stepippo/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

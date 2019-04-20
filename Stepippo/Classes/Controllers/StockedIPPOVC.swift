@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StockedIPPOVC: UIViewController {
+final class StockedIPPOVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

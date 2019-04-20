@@ -13,7 +13,6 @@
         <!--View Controller-->
         <scene sceneID="eYv-dX-01A">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bXf-jt-wJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="y2a-ip-dGs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oxt-c3-Boc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -22,8 +21,9 @@
                         <viewLayoutGuide key="safeArea" id="Kvi-NG-vNv"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bXf-jt-wJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="651" y="-230"/>
+            <point key="canvasLocation" x="341" y="-197"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="V5q-eV-zxU">

@@ -6,37 +6,21 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="eYv-dX-01A">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bXf-jt-wJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="y2a-ip-dGs" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Oxt-c3-Boc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Kvi-NG-vNv"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="651" y="-230"/>
-        </scene>
         <!--Navigation Controller-->
-        <scene sceneID="V5q-eV-zxU">
+        <scene sceneID="6hF-Wq-KgN">
             <objects>
-                <navigationController id="ora-sc-9JH" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oca-HW-wif">
+                <navigationController id="X9g-lk-GAF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gxt-gA-9pU">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QPC-a0-qgZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDm-UQ-laN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1520" y="-230"/>
+            <point key="canvasLocation" x="1" y="-205"/>
         </scene>
     </scenes>
 </document>

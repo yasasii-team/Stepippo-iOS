@@ -204,8 +204,8 @@ extension MiscVC: UITableViewDataSource {
 extension MiscVC: UITableViewDelegate {
     /// セルを選択した時
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-        let cell = tableView.cellForRow(at: indexPath) as! MiscCell
+        // セルの選択状態を解除
+        tableView.deselectRow(at: indexPath, animated: true)
 
         guard let section = Section(rawValue: indexPath.section) else {
             fatalError("存在しないセクション")
@@ -226,6 +226,9 @@ extension MiscVC: UITableViewDelegate {
                 break
                 
             case .dayOfWeekToStart:
+                
+                let cell = tableView.cellForRow(at: indexPath) as! MiscCell
+
                 // 選択肢から選択してActionSheetが閉じ切ってからLabelの文字が変わるので一時的に非表示にしておく
                 cell.detailLabel.isHidden = true
                 let alert = UIAlertController(title: "何曜日からスタートしますか？",
@@ -269,11 +272,15 @@ extension MiscVC: UITableViewDelegate {
                 // TODO: リポジトリをWKWebViewで表示する
                 break
             case .featureRequest:
-                // TODO: エンハンスIssueを見て、投稿もできる
-                break
+                
+                let enhancementIssueVC = UIStoryboard(name: "EnhancementIssue", bundle: nil).instantiateInitialViewController() as! EnhancementIssueVC
+                navigationController?.pushViewController(enhancementIssueVC, animated: true)
+
             case .bugReport:
-                // TODO: バグIssueを見れて、投稿もできる
-                break
+
+                let bugIssueVC = UIStoryboard(name: "BugIssue", bundle: nil).instantiateInitialViewController() as! BugIssueVC
+                navigationController?.pushViewController(bugIssueVC, animated: true)
+
             case .AboutYasasiiKai:
                 // TODO: 詳細画面へ遷移する
                 break

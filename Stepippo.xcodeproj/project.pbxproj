@@ -25,7 +25,6 @@
 		8D0B3A0A22676ACE00B71A7C /* GoalSetting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D0B3A0922676ACE00B71A7C /* GoalSetting.storyboard */; };
 		8D0B3A0C22676AF900B71A7C /* GoalSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B3A0B22676AF900B71A7C /* GoalSettingVC.swift */; };
 		8D29221222460A790046917F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D29221122460A790046917F /* AppDelegate.swift */; };
-		8D29221422460A790046917F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D29221322460A790046917F /* ViewController.swift */; };
 		8D29221722460A790046917F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D29221522460A790046917F /* Main.storyboard */; };
 		8D29221922460A7F0046917F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D29221822460A7F0046917F /* Assets.xcassets */; };
 		8D29221C22460A7F0046917F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D29221A22460A7F0046917F /* LaunchScreen.storyboard */; };
@@ -63,7 +62,6 @@
 		8D0B3A0B22676AF900B71A7C /* GoalSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSettingVC.swift; sourceTree = "<group>"; };
 		8D29220E22460A790046917F /* Stepippo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stepippo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D29221122460A790046917F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Classes/AppDelegate.swift; sourceTree = "<group>"; };
-		8D29221322460A790046917F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8D29221622460A790046917F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D29221822460A7F0046917F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D29221B22460A7F0046917F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -141,7 +139,6 @@
 		0BD30D5A2257A01800C700C8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				8D29221322460A790046917F /* ViewController.swift */,
 				8D0B3A0B22676AF900B71A7C /* GoalSettingVC.swift */,
 				8D071CBC225A44FC004A4A69 /* MiscVC.swift */,
 				8D8FB767226B47CE0063D8EC /* EnhancementIssueVC.swift */,
@@ -320,7 +317,6 @@
 				8D8FB768226B47CE0063D8EC /* EnhancementIssueVC.swift in Sources */,
 				6788A270226A0EEA00E9B0D5 /* AchievedIPPOVC.swift in Sources */,
 				6788A272226A0EFA00E9B0D5 /* StockedIPPOVC.swift in Sources */,
-				8D29221422460A790046917F /* ViewController.swift in Sources */,
 				8D8FB764226B0AFD0063D8EC /* GitHubIssue.swift in Sources */,
 				8D8FB76F226B6F100063D8EC /* SubtitleAndIconCell.swift in Sources */,
 				8D29221222460A790046917F /* AppDelegate.swift in Sources */,

@@ -29,6 +29,10 @@
 		8D29221722460A790046917F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D29221522460A790046917F /* Main.storyboard */; };
 		8D29221922460A7F0046917F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D29221822460A7F0046917F /* Assets.xcassets */; };
 		8D29221C22460A7F0046917F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D29221A22460A7F0046917F /* LaunchScreen.storyboard */; };
+		8D8E2851227B255100299B5B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E284F227B255000299B5B /* README.md */; };
+		8D8E2852227B255100299B5B /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 8D8E2850227B255100299B5B /* Cartfile */; };
+		8D8E2855227B26EB00299B5B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8E2853227B26EB00299B5B /* RealmSwift.framework */; };
+		8D8E2856227B26EB00299B5B /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8E2854227B26EB00299B5B /* Realm.framework */; };
 		8D8FB762226A1AA60063D8EC /* GitHubAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8FB761226A1AA60063D8EC /* GitHubAPIClient.swift */; };
 		8D8FB764226B0AFD0063D8EC /* GitHubIssue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8FB763226B0AFD0063D8EC /* GitHubIssue.swift */; };
 		8D8FB766226B475E0063D8EC /* EnhancementIssue.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8FB765226B475E0063D8EC /* EnhancementIssue.storyboard */; };
@@ -64,6 +68,10 @@
 		8D29221822460A7F0046917F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D29221B22460A7F0046917F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D29221D22460A7F0046917F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D8E284F227B255000299B5B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8D8E2850227B255100299B5B /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		8D8E2853227B26EB00299B5B /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		8D8E2854227B26EB00299B5B /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		8D8FB761226A1AA60063D8EC /* GitHubAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAPIClient.swift; sourceTree = "<group>"; };
 		8D8FB763226B0AFD0063D8EC /* GitHubIssue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubIssue.swift; sourceTree = "<group>"; };
 		8D8FB765226B475E0063D8EC /* EnhancementIssue.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnhancementIssue.storyboard; sourceTree = "<group>"; };
@@ -79,7 +87,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8E2856227B26EB00299B5B /* Realm.framework in Frameworks */,
 				67920DB02262C2D200127083 /* XLPagerTabStrip.framework in Frameworks */,
+				8D8E2855227B26EB00299B5B /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +166,8 @@
 		67920DAC2262BF6300127083 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D8E2854227B26EB00299B5B /* Realm.framework */,
+				8D8E2853227B26EB00299B5B /* RealmSwift.framework */,
 				67920DAF2262C2D100127083 /* XLPagerTabStrip.framework */,
 			);
 			name = Frameworks;
@@ -165,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				8D29221022460A790046917F /* Stepippo */,
+				8D8E2850227B255100299B5B /* Cartfile */,
+				8D8E284F227B255000299B5B /* README.md */,
 				8D29220F22460A790046917F /* Products */,
 				67920DAC2262BF6300127083 /* Frameworks */,
 			);
@@ -198,7 +212,7 @@
 				8D29220A22460A790046917F /* Sources */,
 				8D29220B22460A790046917F /* Frameworks */,
 				8D29220C22460A790046917F /* Resources */,
-				67920DB12263531E00127083 /* ShellScript */,
+				67920DB12263531E00127083 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -250,6 +264,7 @@
 			files = (
 				6788A274226A0F1400E9B0D5 /* ListedIPPO.storyboard in Resources */,
 				8D071CBB225A44CE004A4A69 /* MiscCell.xib in Resources */,
+				8D8E2852227B255100299B5B /* Cartfile in Resources */,
 				8D8FB76A226B651C0063D8EC /* BugIssue.storyboard in Resources */,
 				6788A278226A0F2B00E9B0D5 /* StockedIPPO.storyboard in Resources */,
 				8D0B3A0622625C0900B71A7C /* SelectableCell.xib in Resources */,
@@ -260,6 +275,7 @@
 				8D8FB766226B475E0063D8EC /* EnhancementIssue.storyboard in Resources */,
 				8D29221722460A790046917F /* Main.storyboard in Resources */,
 				6788A276226A0F2100E9B0D5 /* AchievedIPPO.storyboard in Resources */,
+				8D8E2851227B255100299B5B /* README.md in Resources */,
 				0B04AA7C227A9DB200E18F0A /* Prog.storyboard in Resources */,
 				8D0B3A0A22676ACE00B71A7C /* GoalSetting.storyboard in Resources */,
 			);
@@ -268,7 +284,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		67920DB12263531E00127083 /* ShellScript */ = {
+		67920DB12263531E00127083 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -277,7 +293,10 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/XLPagerTabStrip.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (

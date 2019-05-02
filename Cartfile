@@ -1,1 +1,2 @@
 github "xmartlabs/XLPagerTabStrip" ~> 9.0
+github "realm/realm-cocoa"

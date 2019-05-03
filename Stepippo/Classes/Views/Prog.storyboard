@@ -13,7 +13,6 @@
         <!--ProgVC-->
         <scene sceneID="jYM-qj-uIs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lbT-nJ-4ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="rJa-zS-PGh" customClass="ProgVC" customModule="Stepippo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dJE-3K-xgt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -23,14 +22,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="F8I-me-VVy"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lbT-nJ-4ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1495.6521739130435" y="36.830357142857139"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--進捗-->
         <scene sceneID="AUi-eI-kQW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UQp-Eb-c6L" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="進捗" image="TaskCompleted" landscapeImage="TaskCompleted" largeContentSizeImage="TaskCompleted" id="b2j-Bu-u9f"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="b9m-dM-F33">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -45,4 +47,7 @@
             <point key="canvasLocation" x="585.50724637681162" y="36.830357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TaskCompleted" width="25" height="25"/>
+    </resources>
 </document>

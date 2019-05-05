@@ -44,7 +44,7 @@
 
 /* Begin PBXFileReference section */
 		0B04AA79227A9D5100E18F0A /* ProgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgVC.swift; sourceTree = "<group>"; };
-		0B04AA7B227A9DB200E18F0A /* Prog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Prog.storyboard; sourceTree = "<group>"; };
+		0B04AA7B227A9DB200E18F0A /* Prog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Prog.storyboard; path = "/Users/katouayana/Xcode/Stepippo-iOS/Stepippo/Classes/Views/Prog.storyboard"; sourceTree = "<absolute>"; };
 		6788A26D226A0ED000E9B0D5 /* ListedIPPOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedIPPOVC.swift; sourceTree = "<group>"; };
 		6788A26F226A0EEA00E9B0D5 /* AchievedIPPOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievedIPPOVC.swift; sourceTree = "<group>"; };
 		6788A271226A0EFA00E9B0D5 /* StockedIPPOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockedIPPOVC.swift; sourceTree = "<group>"; };

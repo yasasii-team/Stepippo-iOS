@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Duq-D9-4ca">
-                                <rect key="frame" x="39" y="176" width="99" height="33"/>
+                                <rect key="frame" x="39" y="178" width="99" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="期間変更">
@@ -27,7 +27,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="残り〇〇日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMm-BU-hLq">
-                                <rect key="frame" x="265" y="182" width="112" height="27"/>
+                                <rect key="frame" x="265" y="181" width="112" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -45,13 +45,13 @@
                                 <color key="tintColor" red="1" green="0.44470730629999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="達成数2/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUI-QW-NrS">
-                                <rect key="frame" x="276" y="328" width="101" height="27"/>
+                                <rect key="frame" x="276" y="335" width="101" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox-黒レ点" translatesAutoresizingMaskIntoConstraints="NO" id="NrJ-kg-Kze">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkbox-透明レ点" translatesAutoresizingMaskIntoConstraints="NO" id="NrJ-kg-Kze">
                                 <rect key="frame" x="20" y="472" width="68" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,14 +96,6 @@
                                 </accessibility>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="1"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="進捗" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="IIC-1P-lHJ">
-                                <rect key="frame" x="174" y="88" width="72" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdz-5u-PqU">
                                 <rect key="frame" x="39" y="328" width="195" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -128,8 +120,10 @@
         <scene sceneID="AUi-eI-kQW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UQp-Eb-c6L" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="進捗" image="TaskCompleted" landscapeImage="TaskCompleted" largeContentSizeImage="TaskCompleted" id="b2j-Bu-u9f">
-                        <color key="badgeColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <tabBarItem key="tabBarItem" title="進捗" image="TaskIcon-塗りあり" landscapeImage="TaskIcon-塗りなし" largeContentSizeImage="TaskIcon-塗りなし" id="b2j-Bu-u9f">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="2"/>
+                        <inset key="largeContentSizeImageInsets" minX="-1" minY="0.0" maxX="-1" maxY="1"/>
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -148,10 +142,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TaskCompleted" width="25" height="25"/>
+        <image name="TaskIcon-塗りあり" width="50" height="50"/>
+        <image name="TaskIcon-塗りなし" width="50" height="50"/>
         <image name="border角太 黒" width="24" height="24"/>
         <image name="checkbox-細枠" width="50" height="50"/>
-        <image name="checkbox-黒レ点" width="50" height="50"/>
+        <image name="checkbox-透明レ点" width="50" height="50"/>
     </resources>
-    <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

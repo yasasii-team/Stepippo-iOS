@@ -25,6 +25,9 @@
                                 <state key="normal" title="期間変更">
                                     <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="ChangePeriodButton:" destination="rJa-zS-PGh" eventType="touchUpInside" id="cie-7Y-Rgq"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="残り〇〇日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMm-BU-hLq">
                                 <rect key="frame" x="265" y="181" width="112" height="27"/>
@@ -103,6 +106,9 @@
                                 <state key="normal" title="タスクの選択・変更">
                                     <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="ChangeTaskButton:" destination="rJa-zS-PGh" eventType="touchUpInside" id="xgC-ko-tig"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,6 +117,15 @@
                     <navigationItem key="navigationItem" id="F8I-me-VVy">
                         <nil key="title"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="NumberAchievementLabel" destination="FUI-QW-NrS" id="Jf7-ss-fVb"/>
+                        <outlet property="PeriodProgressBar" destination="HjK-iW-HSf" id="kxk-ge-kVZ"/>
+                        <outlet property="RemainingPeriodLabel" destination="ZMm-BU-hLq" id="u0l-ZR-OWw"/>
+                        <outlet property="TaskProgressBar" destination="3EQ-lN-BZa" id="kld-9y-HuQ"/>
+                        <outlet property="TaskTextField1" destination="JLy-3J-sry" id="IHt-Ar-xuI"/>
+                        <outlet property="TaskTextField2" destination="Tzv-Fo-gDE" id="zZo-3H-i1P"/>
+                        <outlet property="TaskTextField3" destination="aqC-kr-4gx" id="AiK-s8-dOQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbT-nJ-4ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

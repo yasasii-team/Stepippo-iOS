@@ -10,8 +10,28 @@ import UIKit
 
 class ProgVC: UIViewController {
 
+    @IBAction func ChangePeriodButton(_ sender: Any) {
+    }
+    @IBAction func ChangeTaskButton(_ sender: Any) {
+    }
+    @IBOutlet weak var RemainingPeriodLabel: UILabel!
+    
+    @IBOutlet weak var NumberAchievementLabel: UILabel!
+    
+    @IBOutlet weak var TaskTextField1: UITextField!
+    
+    @IBOutlet weak var TaskTextField2: UITextField!
+    
+     @IBOutlet weak var TaskTextField3: UITextField!
+    
+    @IBOutlet weak var PeriodProgressBar: UIProgressView!
+    
+    @IBOutlet weak var TaskProgressBar: UIProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
 
         // Do any additional setup after loading the view.
     }

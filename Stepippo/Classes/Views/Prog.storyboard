@@ -25,6 +25,9 @@
                                 <state key="normal" title="期間変更">
                                     <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="lWE-Ri-xHL" kind="presentation" id="nZl-h3-xfM"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="残り〇〇日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMm-BU-hLq">
                                 <rect key="frame" x="265" y="181" width="112" height="27"/>
@@ -115,6 +118,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbT-nJ-4ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1495.6521739130435" y="36.830357142857139"/>
+        </scene>
+        <!--GoalSetting-->
+        <scene sceneID="h4N-c7-9eQ">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="GoalSettingVC" storyboardName="GoalSetting" id="lWE-Ri-xHL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GfH-JH-SzM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="-110"/>
         </scene>
         <!--進捗-->
         <scene sceneID="AUi-eI-kQW">

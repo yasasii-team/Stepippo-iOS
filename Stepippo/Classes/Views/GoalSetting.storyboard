@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K0Z-pI-pC9">
-    <device id="retina5_9" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,40 +15,75 @@
             <objects>
                 <viewController id="lf1-yo-U4p" customClass="GoalSettingVC" customModule="Stepippo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DeG-pb-48B">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="IPPOを入力して追加しよう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbg-v5-gfB">
-                                <rect key="frame" x="16" y="103" width="187" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IPPOを入力して追加しよう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbg-v5-gfB">
+                                <rect key="frame" x="16" y="104" width="187" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amU-Xd-oCF">
-                                <rect key="frame" x="16" y="137" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amU-Xd-oCF">
+                                <rect key="frame" x="16" y="138" width="187" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPd-En-dJE">
-                                <rect key="frame" x="19" y="196" width="165" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPd-En-dJE">
+                                <rect key="frame" x="16" y="184" width="88" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eGJ-yO-Y0X"/>
+                                    <constraint firstAttribute="width" constant="165" id="wnJ-zM-eEq"/>
+                                </constraints>
                                 <state key="normal" title="Stock">
                                     <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysR-pk-NQp">
-                                <rect key="frame" x="194" y="196" width="165" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysR-pk-NQp">
+                                <rect key="frame" x="115" y="184" width="88" height="50"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="TKh-B3-jrn"/>
+                                </constraints>
                                 <state key="normal" title="Add">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ysR-pk-NQp" firstAttribute="leading" secondItem="qPd-En-dJE" secondAttribute="trailing" constant="11" id="4ow-ER-KyP"/>
+                            <constraint firstItem="ysR-pk-NQp" firstAttribute="height" secondItem="qPd-En-dJE" secondAttribute="height" id="7hZ-Qr-m43"/>
+                            <constraint firstItem="sbg-v5-gfB" firstAttribute="leading" secondItem="eLm-Bn-yLj" secondAttribute="leading" constant="16" id="8Wc-Mh-h5b"/>
+                            <constraint firstItem="eLm-Bn-yLj" firstAttribute="trailing" secondItem="amU-Xd-oCF" secondAttribute="trailing" constant="16" id="9nI-Zw-gQq"/>
+                            <constraint firstItem="ysR-pk-NQp" firstAttribute="width" secondItem="qPd-En-dJE" secondAttribute="width" id="Cth-jJ-LFr"/>
+                            <constraint firstItem="amU-Xd-oCF" firstAttribute="top" secondItem="sbg-v5-gfB" secondAttribute="bottom" constant="16" id="GsP-35-cFv"/>
+                            <constraint firstItem="amU-Xd-oCF" firstAttribute="leading" secondItem="eLm-Bn-yLj" secondAttribute="leading" constant="16" id="JDP-iy-GNa"/>
+                            <constraint firstItem="eLm-Bn-yLj" firstAttribute="trailing" secondItem="sbg-v5-gfB" secondAttribute="trailing" constant="16" id="Jfr-RC-GRB"/>
+                            <constraint firstItem="sbg-v5-gfB" firstAttribute="top" secondItem="eLm-Bn-yLj" secondAttribute="top" constant="16" id="KeO-l2-cYa"/>
+                            <constraint firstItem="eLm-Bn-yLj" firstAttribute="trailing" secondItem="ysR-pk-NQp" secondAttribute="trailing" constant="16" id="MCy-pY-2pd"/>
+                            <constraint firstItem="ysR-pk-NQp" firstAttribute="top" secondItem="amU-Xd-oCF" secondAttribute="bottom" constant="16" id="OQY-Fd-OpE"/>
+                            <constraint firstItem="qPd-En-dJE" firstAttribute="leading" secondItem="eLm-Bn-yLj" secondAttribute="leading" constant="16" id="R9h-DD-Yyh"/>
+                            <constraint firstItem="amU-Xd-oCF" firstAttribute="top" secondItem="sbg-v5-gfB" secondAttribute="bottom" constant="16" id="S25-7b-JWu"/>
+                            <constraint firstItem="qPd-En-dJE" firstAttribute="top" secondItem="amU-Xd-oCF" secondAttribute="bottom" constant="16" id="fd7-bO-clZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eLm-Bn-yLj"/>
                     </view>
                     <navigationItem key="navigationItem" title="タスク選択" id="MWP-Av-rac">
@@ -66,7 +101,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K0Z-pI-pC9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j51-RF-Xec">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

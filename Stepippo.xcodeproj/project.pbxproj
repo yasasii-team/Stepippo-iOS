@@ -99,10 +99,10 @@
 		0B2ED57522579E2B00C98944 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E7E97F682285B01400920B74 /* Util */,
-				0BD30D5B2257A04600C700C8 /* Models */,
-				0BD30D5A2257A01800C700C8 /* Controllers */,
 				0B2ED57722579E9C00C98944 /* Views */,
+				0BD30D5A2257A01800C700C8 /* Controllers */,
+				0BD30D5B2257A04600C700C8 /* Models */,
+				E7E97F682285B01400920B74 /* Util */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

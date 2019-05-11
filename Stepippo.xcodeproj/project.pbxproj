@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B04AA7A227A9D5100E18F0A /* ProgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B04AA79227A9D5100E18F0A /* ProgVC.swift */; };
 		0B04AA7C227A9DB200E18F0A /* Prog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B04AA7B227A9DB200E18F0A /* Prog.storyboard */; };
+		0BF9DA91228464A70021096A /* ProgCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF9DA90228464A70021096A /* ProgCheckButton.swift */; };
 		6788A26E226A0ED000E9B0D5 /* ListedIPPOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788A26D226A0ED000E9B0D5 /* ListedIPPOVC.swift */; };
 		6788A270226A0EEA00E9B0D5 /* AchievedIPPOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788A26F226A0EEA00E9B0D5 /* AchievedIPPOVC.swift */; };
 		6788A272226A0EFA00E9B0D5 /* StockedIPPOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788A271226A0EFA00E9B0D5 /* StockedIPPOVC.swift */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		0B04AA79227A9D5100E18F0A /* ProgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgVC.swift; sourceTree = "<group>"; };
 		0B04AA7B227A9DB200E18F0A /* Prog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Prog.storyboard; sourceTree = "<group>"; };
+		0BF9DA90228464A70021096A /* ProgCheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgCheckButton.swift; sourceTree = "<group>"; };
 		6788A26D226A0ED000E9B0D5 /* ListedIPPOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedIPPOVC.swift; sourceTree = "<group>"; };
 		6788A26F226A0EEA00E9B0D5 /* AchievedIPPOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievedIPPOVC.swift; sourceTree = "<group>"; };
 		6788A271226A0EFA00E9B0D5 /* StockedIPPOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockedIPPOVC.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				6788A26F226A0EEA00E9B0D5 /* AchievedIPPOVC.swift */,
 				6788A271226A0EFA00E9B0D5 /* StockedIPPOVC.swift */,
 				0B04AA79227A9D5100E18F0A /* ProgVC.swift */,
+				0BF9DA90228464A70021096A /* ProgCheckButton.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				8D8FB76F226B6F100063D8EC /* SubtitleAndIconCell.swift in Sources */,
 				8D29221222460A790046917F /* AppDelegate.swift in Sources */,
 				8D0B3A0C22676AF900B71A7C /* GoalSettingVC.swift in Sources */,
+				0BF9DA91228464A70021096A /* ProgCheckButton.swift in Sources */,
 				8D071CBA225A44CE004A4A69 /* MiscCell.swift in Sources */,
 				8D8FB76C226B65A60063D8EC /* BugIssueVC.swift in Sources */,
 			);

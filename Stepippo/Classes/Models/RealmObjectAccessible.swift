@@ -115,14 +115,12 @@ extension RealmObjectAccessible {
     ///
     /// - Parameter object: 対象のRealmオブジェクト
     /// - Returns: インクリメントしたプライマリーキー
-    func newPrimaryKey<T: Object>(object: T) -> Int {
+    func createIncrementedPrimaryKey<T: Object>(objectType: T.Type) -> Int {
         guard let key = T.primaryKey() else { fatalError("このオブジェクトにはプライマリキーがありません") }
         
         let firstId = 0
-        
-        let realm = try! Realm()
         // 最後のプライマリーキーを取得
-        if let last = realm.objects(T.self).sorted(byKeyPath: "id", ascending: true).last,
+        if let last = fetch(objectType, predicate: nil, sortKeyPath: "id").last,
             let lastId = last[key] as? Int {
             return lastId + 1  // 最後のプライマリキーに+1した数値を返す
         } else {

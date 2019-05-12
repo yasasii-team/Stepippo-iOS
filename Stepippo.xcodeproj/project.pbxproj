@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B04AA7A227A9D5100E18F0A /* ProgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B04AA79227A9D5100E18F0A /* ProgVC.swift */; };
 		0B04AA7C227A9DB200E18F0A /* Prog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B04AA7B227A9DB200E18F0A /* Prog.storyboard */; };
+		0BF9DA91228464A70021096A /* ProgCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF9DA90228464A70021096A /* ProgCheckButton.swift */; };
 		6788A26E226A0ED000E9B0D5 /* ListedIPPOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788A26D226A0ED000E9B0D5 /* ListedIPPOVC.swift */; };
 		6788A270226A0EEA00E9B0D5 /* AchievedIPPOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788A26F226A0EEA00E9B0D5 /* AchievedIPPOVC.swift */; };
 		6788A272226A0EFA00E9B0D5 /* StockedIPPOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788A271226A0EFA00E9B0D5 /* StockedIPPOVC.swift */; };
@@ -40,12 +41,14 @@
 		8D8FB76C226B65A60063D8EC /* BugIssueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8FB76B226B65A60063D8EC /* BugIssueVC.swift */; };
 		8D8FB76F226B6F100063D8EC /* SubtitleAndIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8FB76D226B6F100063D8EC /* SubtitleAndIconCell.swift */; };
 		8D8FB770226B6F100063D8EC /* SubtitleAndIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8FB76E226B6F100063D8EC /* SubtitleAndIconCell.xib */; };
+		E7E97F6A2285B04700920B74 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E97F692285B04700920B74 /* UIView+Extension.swift */; };
 		8DD50CF02285E92A00098AA3 /* RealmObjectAccessible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD50CEF2285E92A00098AA3 /* RealmObjectAccessible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B04AA79227A9D5100E18F0A /* ProgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgVC.swift; sourceTree = "<group>"; };
 		0B04AA7B227A9DB200E18F0A /* Prog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Prog.storyboard; sourceTree = "<group>"; };
+		0BF9DA90228464A70021096A /* ProgCheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgCheckButton.swift; sourceTree = "<group>"; };
 		6788A26D226A0ED000E9B0D5 /* ListedIPPOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedIPPOVC.swift; sourceTree = "<group>"; };
 		6788A26F226A0EEA00E9B0D5 /* AchievedIPPOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievedIPPOVC.swift; sourceTree = "<group>"; };
 		6788A271226A0EFA00E9B0D5 /* StockedIPPOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockedIPPOVC.swift; sourceTree = "<group>"; };
@@ -79,6 +82,7 @@
 		8D8FB76B226B65A60063D8EC /* BugIssueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugIssueVC.swift; sourceTree = "<group>"; };
 		8D8FB76D226B6F100063D8EC /* SubtitleAndIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleAndIconCell.swift; sourceTree = "<group>"; };
 		8D8FB76E226B6F100063D8EC /* SubtitleAndIconCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleAndIconCell.xib; sourceTree = "<group>"; };
+		E7E97F692285B04700920B74 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8DD50CEF2285E92A00098AA3 /* RealmObjectAccessible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObjectAccessible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,9 +103,10 @@
 		0B2ED57522579E2B00C98944 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				0BD30D5B2257A04600C700C8 /* Models */,
-				0BD30D5A2257A01800C700C8 /* Controllers */,
 				0B2ED57722579E9C00C98944 /* Views */,
+				0BD30D5A2257A01800C700C8 /* Controllers */,
+				0BD30D5B2257A04600C700C8 /* Models */,
+				E7E97F682285B01400920B74 /* Util */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				6788A26F226A0EEA00E9B0D5 /* AchievedIPPOVC.swift */,
 				6788A271226A0EFA00E9B0D5 /* StockedIPPOVC.swift */,
 				0B04AA79227A9D5100E18F0A /* ProgVC.swift */,
+				0BF9DA90228464A70021096A /* ProgCheckButton.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +206,14 @@
 				0B2ED57622579E5700C98944 /* Resources */,
 			);
 			path = Stepippo;
+			sourceTree = "<group>";
+		};
+		E7E97F682285B01400920B74 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E7E97F692285B04700920B74 /* UIView+Extension.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,6 +329,7 @@
 				8D071CBD225A44FC004A4A69 /* MiscVC.swift in Sources */,
 				6788A26E226A0ED000E9B0D5 /* ListedIPPOVC.swift in Sources */,
 				0B04AA7A227A9D5100E18F0A /* ProgVC.swift in Sources */,
+				E7E97F6A2285B04700920B74 /* UIView+Extension.swift in Sources */,
 				8D0B3A0522625C0900B71A7C /* SelectableCell.swift in Sources */,
 				8D8FB762226A1AA60063D8EC /* GitHubAPIClient.swift in Sources */,
 				8D8FB768226B47CE0063D8EC /* EnhancementIssueVC.swift in Sources */,
@@ -325,6 +340,7 @@
 				8DD50CF02285E92A00098AA3 /* RealmObjectAccessible.swift in Sources */,
 				8D29221222460A790046917F /* AppDelegate.swift in Sources */,
 				8D0B3A0C22676AF900B71A7C /* GoalSettingVC.swift in Sources */,
+				0BF9DA91228464A70021096A /* ProgCheckButton.swift in Sources */,
 				8D071CBA225A44CE004A4A69 /* MiscCell.swift in Sources */,
 				8D8FB76C226B65A60063D8EC /* BugIssueVC.swift in Sources */,
 			);

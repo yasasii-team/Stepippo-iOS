@@ -75,19 +75,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ysR-pk-NQp" firstAttribute="leading" secondItem="qPd-En-dJE" secondAttribute="trailing" constant="11" id="4ow-ER-KyP"/>
-                            <constraint firstItem="ysR-pk-NQp" firstAttribute="height" secondItem="qPd-En-dJE" secondAttribute="height" id="7hZ-Qr-m43"/>
                             <constraint firstItem="sbg-v5-gfB" firstAttribute="leading" secondItem="eLm-Bn-yLj" secondAttribute="leading" constant="16" id="8Wc-Mh-h5b"/>
                             <constraint firstItem="eLm-Bn-yLj" firstAttribute="trailing" secondItem="amU-Xd-oCF" secondAttribute="trailing" constant="16" id="9nI-Zw-gQq"/>
                             <constraint firstItem="ysR-pk-NQp" firstAttribute="width" secondItem="qPd-En-dJE" secondAttribute="width" id="Cth-jJ-LFr"/>
-                            <constraint firstItem="amU-Xd-oCF" firstAttribute="top" secondItem="sbg-v5-gfB" secondAttribute="bottom" constant="16" id="GsP-35-cFv"/>
                             <constraint firstItem="amU-Xd-oCF" firstAttribute="leading" secondItem="eLm-Bn-yLj" secondAttribute="leading" constant="16" id="JDP-iy-GNa"/>
                             <constraint firstItem="eLm-Bn-yLj" firstAttribute="trailing" secondItem="sbg-v5-gfB" secondAttribute="trailing" constant="16" id="Jfr-RC-GRB"/>
                             <constraint firstItem="sbg-v5-gfB" firstAttribute="top" secondItem="eLm-Bn-yLj" secondAttribute="top" constant="16" id="KeO-l2-cYa"/>
                             <constraint firstItem="eLm-Bn-yLj" firstAttribute="trailing" secondItem="ysR-pk-NQp" secondAttribute="trailing" constant="16" id="MCy-pY-2pd"/>
-                            <constraint firstItem="ysR-pk-NQp" firstAttribute="top" secondItem="amU-Xd-oCF" secondAttribute="bottom" constant="16" id="OQY-Fd-OpE"/>
                             <constraint firstItem="qPd-En-dJE" firstAttribute="leading" secondItem="eLm-Bn-yLj" secondAttribute="leading" constant="16" id="R9h-DD-Yyh"/>
                             <constraint firstItem="amU-Xd-oCF" firstAttribute="top" secondItem="sbg-v5-gfB" secondAttribute="bottom" constant="16" id="S25-7b-JWu"/>
                             <constraint firstItem="qPd-En-dJE" firstAttribute="top" secondItem="amU-Xd-oCF" secondAttribute="bottom" constant="16" id="fd7-bO-clZ"/>
+                            <constraint firstItem="ysR-pk-NQp" firstAttribute="baseline" secondItem="qPd-En-dJE" secondAttribute="baseline" id="xLG-fS-Fx4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eLm-Bn-yLj"/>
                     </view>

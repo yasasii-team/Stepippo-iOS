@@ -16,6 +16,7 @@ final class GoalSettingVC: UIViewController {
     
     // MARK: - IBAction methods
     @IBAction func stopButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func stockButton(_ sender: Any) {

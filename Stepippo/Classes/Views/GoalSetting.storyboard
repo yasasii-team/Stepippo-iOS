@@ -52,6 +52,9 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="stockButton:" destination="lf1-yo-U4p" eventType="touchUpInside" id="rzf-pv-nBP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysR-pk-NQp">
                                 <rect key="frame" x="212.66666666666663" y="190" width="185.33333333333337" height="50"/>
@@ -70,6 +73,9 @@
                                         <color key="value" cocoaTouchSystemColor="darkTextColor"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addButton:" destination="lf1-yo-U4p" eventType="touchUpInside" id="36K-pU-9GA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,7 +96,11 @@
                         <viewLayoutGuide key="safeArea" id="eLm-Bn-yLj"/>
                     </view>
                     <navigationItem key="navigationItem" title="タスク選択" id="MWP-Av-rac">
-                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="XbD-qh-2mA"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="XbD-qh-2mA">
+                            <connections>
+                                <action selector="stopButton:" destination="lf1-yo-U4p" id="wdg-op-xYb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>

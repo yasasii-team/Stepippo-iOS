@@ -15,6 +15,14 @@ final class GoalSettingVC: UIViewController {
     
     
     // MARK: - IBAction methods
+    @IBAction func stopButton(_ sender: Any) {
+    }
+    
+    @IBAction func stockButton(_ sender: Any) {
+    }
+    
+    @IBAction func addButton(_ sender: Any) {
+    }
     
     // MARK: - Life cycle methods
     override func viewDidLoad() {

@@ -50,26 +50,20 @@ extension RealmObjectAccessible {
     
     // MARK: - 読み込み
     
-    /// Realmオブジェクトを全て返す
-    ///
-    /// - Parameter objectType: Realmオブジェクトの型
-    /// - Returns: 検索結果のRealmオブジェクト
-    func fetch<T: Object>(_ objectType: T.Type) -> Results<T> {
-        
-        let realm = try! Realm()
-        
-        return realm.objects(objectType)
-    }
-    
     /// 検索条件でフィルタリングしたRealmオブジェクトの検索結果を返す
     ///
     /// - Parameters:
     ///   - objectType: Realmオブジェクトの型
     ///   - predicate: 検索条件
     /// - Returns: 検索結果のRealmオブジェクト
-    func fetch<T: Object>(_ objectType: T.Type, predicate: NSPredicate) -> Results<T> {
+    func fetch<T: Object>(_ objectType: T.Type, predicate: NSPredicate? = nil) -> Results<T> {
         
-        return fetch(objectType).filter(predicate)
+        let realm = try! Realm()
+
+        if let predicate = predicate {
+            return realm.objects(objectType).filter(predicate)
+        }
+        return realm.objects(objectType)
     }
     
     /// フィルタリング検索し、並び替えをしたRealmオブジェクト結果を返す
@@ -80,9 +74,15 @@ extension RealmObjectAccessible {
     ///   - sortKeyPath: 並び替えに使うkey
     ///   - isAcsending: 昇順か否か。デフォルトは昇順
     /// - Returns: 検索結果のRealmオブジェクト
-    func fetch<T: Object>(_ objectType: T.Type, predicate: NSPredicate, sortKeyPath: String, isAcsending: Bool = true) -> Results<T> {
+    func fetch<T: Object>(_ objectType: T.Type, predicate: NSPredicate?, sortKeyPath: String, isAcsending: Bool = true) -> Results<T> {
+        // predicateが指定されていればけフィルタリングを行う
+        if let predicate = predicate {
+            return fetch(objectType, predicate: predicate).sorted(byKeyPath: sortKeyPath, ascending: isAcsending)
+        }
         
-        return fetch(objectType, predicate: predicate).sorted(byKeyPath: sortKeyPath, ascending: false)
+        let realm = try! Realm()
+
+        return realm.objects(objectType).sorted(byKeyPath: sortKeyPath, ascending: isAcsending)
     }
     
     // MARK: - 削除

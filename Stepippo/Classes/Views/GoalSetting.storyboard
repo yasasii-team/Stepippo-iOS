@@ -27,17 +27,16 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amU-Xd-oCF">
                                 <rect key="frame" x="16" y="138" width="382" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="YsW-Ss-2jn"/>
+                                    <constraint firstAttribute="height" constant="36" id="joN-Va-Nv6"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPd-En-dJE">
-                                <rect key="frame" x="16" y="190" width="165" height="50"/>
+                                <rect key="frame" x="16" y="190" width="185.66666666666666" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eGJ-yO-Y0X"/>
-                                    <constraint firstAttribute="width" constant="165" id="wnJ-zM-eEq"/>
                                 </constraints>
                                 <state key="normal" title="Stock">
                                     <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,10 +48,13 @@
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysR-pk-NQp">
-                                <rect key="frame" x="192" y="190" width="206" height="50"/>
+                                <rect key="frame" x="212.66666666666663" y="190" width="185.33333333333337" height="50"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TKh-B3-jrn"/>
@@ -76,6 +78,7 @@
                             <constraint firstItem="ysR-pk-NQp" firstAttribute="height" secondItem="qPd-En-dJE" secondAttribute="height" id="7hZ-Qr-m43"/>
                             <constraint firstItem="sbg-v5-gfB" firstAttribute="leading" secondItem="eLm-Bn-yLj" secondAttribute="leading" constant="16" id="8Wc-Mh-h5b"/>
                             <constraint firstItem="eLm-Bn-yLj" firstAttribute="trailing" secondItem="amU-Xd-oCF" secondAttribute="trailing" constant="16" id="9nI-Zw-gQq"/>
+                            <constraint firstItem="ysR-pk-NQp" firstAttribute="width" secondItem="qPd-En-dJE" secondAttribute="width" id="Cth-jJ-LFr"/>
                             <constraint firstItem="amU-Xd-oCF" firstAttribute="top" secondItem="sbg-v5-gfB" secondAttribute="bottom" constant="16" id="GsP-35-cFv"/>
                             <constraint firstItem="amU-Xd-oCF" firstAttribute="leading" secondItem="eLm-Bn-yLj" secondAttribute="leading" constant="16" id="JDP-iy-GNa"/>
                             <constraint firstItem="eLm-Bn-yLj" firstAttribute="trailing" secondItem="sbg-v5-gfB" secondAttribute="trailing" constant="16" id="Jfr-RC-GRB"/>

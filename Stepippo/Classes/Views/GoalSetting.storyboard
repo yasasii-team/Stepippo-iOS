@@ -25,13 +25,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="amU-Xd-oCF">
-                                <rect key="frame" x="16" y="138" width="382" height="30"/>
+                                <rect key="frame" x="16" y="138" width="382" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="YsW-Ss-2jn"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPd-En-dJE">
-                                <rect key="frame" x="16" y="184" width="165" height="50"/>
+                                <rect key="frame" x="16" y="190" width="165" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eGJ-yO-Y0X"/>
                                     <constraint firstAttribute="width" constant="165" id="wnJ-zM-eEq"/>
@@ -49,7 +52,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysR-pk-NQp">
-                                <rect key="frame" x="192" y="184" width="206" height="50"/>
+                                <rect key="frame" x="192" y="190" width="206" height="50"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TKh-B3-jrn"/>

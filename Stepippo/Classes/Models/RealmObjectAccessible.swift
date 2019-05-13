@@ -122,7 +122,7 @@ extension RealmObjectAccessible {
         // 最後のプライマリーキーを取得
         if let last = fetch(objectType, predicate: nil, sortKeyPath: "id").last,
             let lastId = last[key] as? Int {
-            return lastId + 1  // 最後のプライマリキーに+1した数値を返す
+            return lastId.incremented
         } else {
             return firstId
         }

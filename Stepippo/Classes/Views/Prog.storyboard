@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UQp-Eb-c6L">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -23,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="139" translatesAutoresizingMaskIntoConstraints="NO" id="mAq-it-AeJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="293" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="292.66666666666669" height="34"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Duq-D9-4ca">
                                                 <rect key="frame" x="0.0" y="0.0" width="74" height="34"/>
@@ -33,7 +33,7 @@
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="残り2日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMm-BU-hLq">
-                                                <rect key="frame" x="213" y="0.0" width="80" height="34"/>
+                                                <rect key="frame" x="213" y="0.0" width="79.666666666666686" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
@@ -46,7 +46,7 @@
                                         <color key="progressTintColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </progressView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="mVX-IC-g4J">
-                                        <rect key="frame" x="0.0" y="112" width="304.5" height="34"/>
+                                        <rect key="frame" x="0.0" y="112" width="304.66666666666669" height="34"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdz-5u-PqU">
                                                 <rect key="frame" x="0.0" y="0.0" width="166" height="34"/>
@@ -56,7 +56,7 @@
                                                 </state>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="達成数2/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUI-QW-NrS">
-                                                <rect key="frame" x="204" y="0.0" width="100.5" height="34"/>
+                                                <rect key="frame" x="204" y="0.0" width="100.66666666666669" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                 <nil key="highlightedColor"/>
@@ -116,6 +116,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
                         <viewLayoutGuide key="safeArea" id="KMI-fy-qFl"/>
                     </view>
                     <navigationItem key="navigationItem" id="F8I-me-VVy">
@@ -130,10 +131,8 @@
         <scene sceneID="AUi-eI-kQW">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UQp-Eb-c6L" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="進捗" image="TaskIcon-塗りあり" landscapeImage="TaskIcon-塗りなし" largeContentSizeImage="TaskIcon-塗りなし" id="b2j-Bu-u9f">
-                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="2"/>
+                    <tabBarItem key="tabBarItem" title="進捗" image="TaskIcon" id="b2j-Bu-u9f">
                         <inset key="largeContentSizeImageInsets" minX="-1" minY="0.0" maxX="-1" maxY="1"/>
-                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -152,8 +151,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TaskIcon-塗りあり" width="50" height="50"/>
-        <image name="TaskIcon-塗りなし" width="50" height="50"/>
+        <image name="TaskIcon" width="25" height="25"/>
     </resources>
-    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -12,7 +12,7 @@ import UIKit
 final class GoalSettingVC: UIViewController {
     
     // MARK: - IBOutlet properties
-    
+    @IBOutlet weak var addtaskTextField: UITextField!
     
     // MARK: - IBAction methods
     @IBAction func stopButton(_ sender: Any) {
@@ -28,15 +28,23 @@ final class GoalSettingVC: UIViewController {
     // MARK: - Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        addtaskTextField.delegate = self
     }
 }
 
-// MARK: - Private fields
-private extension GoalSettingVC {
+// MARK: - TextField fields
+extension GoalSettingVC: UITextFieldDelegate {
     
-    // MARK: - Private properties
+    // MARK: - TextField properties
     
-    // MARK: - Private methods
+    // MARK: - TextField methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        addtaskTextField.resignFirstResponder()
+        return true
+    }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
 }
 

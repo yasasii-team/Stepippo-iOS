@@ -16,6 +16,7 @@ enum IPPOStatus: String {
     case achieved // 達成済み
 }
 
+@objcMembers
 class IPPO: Object {
     // 一意のID
     dynamic var id = 0

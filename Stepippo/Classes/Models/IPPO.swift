@@ -11,7 +11,7 @@ import RealmSwift
 
 class IPPO: Object {
     // 一意のID
-    dynamic var primaryKey = 0
+    dynamic var id = 0
     
     // タスクの名前
     dynamic var title = ""
@@ -25,4 +25,8 @@ class IPPO: Object {
     
     // タスク実施日時
     dynamic var performedDateTime: Date?
+    
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

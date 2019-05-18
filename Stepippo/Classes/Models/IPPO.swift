@@ -27,7 +27,7 @@ class IPPO: Object {
     dynamic private var ippoStatus = ""
     
     // タスク追加日時
-    dynamic var addDateTime: Date?
+    dynamic var addDateTime = Date()
     
     // タスク実施日時
     dynamic var performedDateTime: Date?

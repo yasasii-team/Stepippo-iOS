@@ -9,6 +9,13 @@
 import Foundation
 import RealmSwift
 
+enum IPPOStatus: String {
+    case stock // 後でやる
+    case challenging // 挑戦中
+    case performed  // 達成見込
+    case achieved // 達成済み
+}
+
 class IPPO: Object {
     // 一意のID
     dynamic var id = 0
@@ -17,8 +24,7 @@ class IPPO: Object {
     dynamic var title = ""
     
     // 進捗状態
-    // 後でやる："stock", 挑戦中："challenging", 達成見込："performed", 達成済み："achieved"
-    dynamic var status = ""
+    dynamic private var ippoStatus = ""
     
     // タスク追加日時
     dynamic var addDateTime: Date?
@@ -28,5 +34,14 @@ class IPPO: Object {
     
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    var status: IPPOStatus {
+        get {
+            return IPPOStatus(rawValue: ippoStatus)!
+        }
+        set {
+            ippoStatus = newValue.rawValue
+        }
     }
 }

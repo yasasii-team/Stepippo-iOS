@@ -43,6 +43,7 @@
 		8D8FB770226B6F100063D8EC /* SubtitleAndIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8FB76E226B6F100063D8EC /* SubtitleAndIconCell.xib */; };
 		8DD50CF02285E92A00098AA3 /* RealmObjectAccessible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD50CEF2285E92A00098AA3 /* RealmObjectAccessible.swift */; };
 		8DD50CF52289A33800098AA3 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD50CF42289A33800098AA3 /* Int+Extension.swift */; };
+		9173A4B222902180007749F0 /* IPPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9173A4B122902180007749F0 /* IPPO.swift */; };
 		E7E97F6A2285B04700920B74 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E97F692285B04700920B74 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +86,7 @@
 		8D8FB76E226B6F100063D8EC /* SubtitleAndIconCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleAndIconCell.xib; sourceTree = "<group>"; };
 		8DD50CEF2285E92A00098AA3 /* RealmObjectAccessible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObjectAccessible.swift; sourceTree = "<group>"; };
 		8DD50CF42289A33800098AA3 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		9173A4B122902180007749F0 /* IPPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPPO.swift; sourceTree = "<group>"; };
 		E7E97F692285B04700920B74 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 				8D8FB763226B0AFD0063D8EC /* GitHubIssue.swift */,
 				8D8FB761226A1AA60063D8EC /* GitHubAPIClient.swift */,
 				8DD50CEF2285E92A00098AA3 /* RealmObjectAccessible.swift */,
+				9173A4B122902180007749F0 /* IPPO.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				6788A272226A0EFA00E9B0D5 /* StockedIPPOVC.swift in Sources */,
 				8D8FB764226B0AFD0063D8EC /* GitHubIssue.swift in Sources */,
 				8D8FB76F226B6F100063D8EC /* SubtitleAndIconCell.swift in Sources */,
+				9173A4B222902180007749F0 /* IPPO.swift in Sources */,
 				8DD50CF02285E92A00098AA3 /* RealmObjectAccessible.swift in Sources */,
 				8D29221222460A790046917F /* AppDelegate.swift in Sources */,
 				8D0B3A0C22676AF900B71A7C /* GoalSettingVC.swift in Sources */,

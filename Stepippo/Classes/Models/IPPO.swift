@@ -25,7 +25,7 @@ class IPPO: Object {
     dynamic var title = ""
     
     // 進捗状態
-    dynamic private var ippoStatus = ""
+    dynamic var ippoStatus = ""
     
     // タスク追加日時
     dynamic var addDateTime = Date()

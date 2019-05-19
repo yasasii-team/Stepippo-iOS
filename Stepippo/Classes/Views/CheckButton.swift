@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProgCheckButton: UIButton {
+class CheckButton: UIButton {
 
     /*
     // Only override draw() if you perform custom drawing.

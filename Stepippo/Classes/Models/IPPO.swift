@@ -19,7 +19,7 @@ enum IPPOStatus: String {
 @objcMembers
 class IPPO: Object {
     // 一意のID
-    dynamic var id = NSUUID().uuidString
+    dynamic var id = UUID().uuidString
     
     // タスクの名前
     dynamic var title = ""

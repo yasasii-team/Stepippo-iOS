@@ -19,7 +19,7 @@ enum IPPOStatus: String {
 @objcMembers
 class IPPO: Object {
     // 一意のID
-    dynamic var id = 0
+    dynamic var id = NSUUID().uuidString
     
     // タスクの名前
     dynamic var title = ""
@@ -32,10 +32,6 @@ class IPPO: Object {
     
     // タスク実施日時
     dynamic var performedDateTime: Date?
-    
-    override static func primaryKey() -> String? {
-        return "id"
-    }
     
     var status: IPPOStatus {
         get {

@@ -141,6 +141,7 @@
 				6788A275226A0F2100E9B0D5 /* AchievedIPPO.storyboard */,
 				6788A277226A0F2B00E9B0D5 /* StockedIPPO.storyboard */,
 				0B04AA7B227A9DB200E18F0A /* Prog.storyboard */,
+				0BF9DA90228464A70021096A /* ProgCheckButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,7 +157,6 @@
 				6788A26F226A0EEA00E9B0D5 /* AchievedIPPOVC.swift */,
 				6788A271226A0EFA00E9B0D5 /* StockedIPPOVC.swift */,
 				0B04AA79227A9D5100E18F0A /* ProgVC.swift */,
-				0BF9DA90228464A70021096A /* ProgCheckButton.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

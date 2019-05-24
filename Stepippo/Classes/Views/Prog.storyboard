@@ -90,6 +90,9 @@
                                                         <real key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <segue destination="FLr-3g-vb7" kind="presentation" id="PFr-Yd-DwR"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="達成数2/3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUI-QW-NrS">
                                                 <rect key="frame" x="182.5" y="4" width="73.5" height="28"/>
@@ -186,6 +189,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbT-nJ-4ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1492.5" y="34.859154929577464"/>
+        </scene>
+        <!--GoalSetting-->
+        <scene sceneID="I2T-4W-ftC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GoalSetting" id="FLr-3g-vb7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kNf-X5-vOI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2020" y="-121"/>
         </scene>
         <!--進捗-->
         <scene sceneID="AUi-eI-kQW">

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CheckButton: UIButton {
+final class CheckButton: UIButton {
     // Images
     let checkedImage = UIImage(named: "Checkbox")! as UIImage
     let uncheckedImage = UIImage(named: "UnCheckbox")! as UIImage
@@ -16,7 +16,7 @@ class CheckButton: UIButton {
     // Bool property
     var isChecked: Bool = false {
         didSet{
-            if isChecked == true {
+            if isChecked {
                 self.setImage(checkedImage, for: UIControl.State.normal)
             } else {
                 self.setImage(uncheckedImage, for: UIControl.State.normal)
@@ -32,7 +32,7 @@ class CheckButton: UIButton {
     
     @objc func buttonClicked(sender: UIButton) {
         if sender == self {
-            isChecked = !isChecked
+            isChecked.toggle()
         }
     }
 }

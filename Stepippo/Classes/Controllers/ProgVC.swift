@@ -10,6 +10,19 @@ import UIKit
 
 class ProgVC: UIViewController {
 
+    
+    @IBAction func checkClicked1(_ sender: CheckButton) {
+        print(sender.isChecked)
+    }
+    
+    @IBAction func checkClicked2(_ sender: CheckButton) {
+        print(sender.isChecked)
+    }
+    
+    @IBAction func checkClicked3(_ sender: CheckButton) {
+        print(sender.isChecked)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -2,7 +2,7 @@
 初めての一歩を応援するアプリのiOS版
 
 ## プロトタイプ
-https://sketch.cloud/s/rlRVq/l1g7Dvz/play
+https://sketch.cloud/s/rlRVq
 
 ## ターゲットOS
 iOS 11 以上

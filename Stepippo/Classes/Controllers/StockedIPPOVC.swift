@@ -1,30 +1,17 @@
-//
-//  StockedIPPOVC.swift
-//  Stepippo
-//
-//  Created by 山本竜也 on 2019/4/19.
-//  Copyright © 2019 Yasasii-kai. All rights reserved.
-//
-
 import UIKit
+import RealmSwift
 
 final class StockedIPPOVC: UIViewController {
 
+    private var stockedIppoList: Results<IPPO>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        getStockedIppo()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func getStockedIppo() {
+        guard let realm = try? Realm() else { print("Realmインスタンスの生成に失敗"); return }
+        stockedIppoList = realm.objects(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray: [IPPOStatus.stock.rawValue]))
     }
-    */
-
 }

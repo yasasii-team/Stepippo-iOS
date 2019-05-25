@@ -23,7 +23,7 @@ final class ProgVC: UIViewController {
         print(sender.isChecked)
     }
     
-    @IBAction func showActionSheet() {
+    @IBAction func didTapSeselectPeriodButton() {
         // アクションシートのタイトルとメッセージ
         let actionSheet = UIAlertController(title: "期間変更", message: "達成したい目標期間を選択してください", preferredStyle: .actionSheet)
         
@@ -47,7 +47,7 @@ final class ProgVC: UIViewController {
     }
     
     // アクションシートで選択した時の処理
-    func actionSheetChoose(sender: UIAlertAction) {
+    private func actionSheetChoose(sender: UIAlertAction) {
         print("\(sender.title!)に変更しました")
     }
     
@@ -55,10 +55,5 @@ final class ProgVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

@@ -2,7 +2,7 @@ import UIKit
 import RealmSwift
 import XLPagerTabStrip
 
-final class StockedIPPOVC: UIViewController {
+final class StockedIPPOVC: UIViewController, RealmObjectAccessible {
 
     // TODO: リストのセクション分け
     private var stockedIppoList: Results<IPPO>?
@@ -13,8 +13,7 @@ final class StockedIPPOVC: UIViewController {
     }
     
     private func getStockedIppo() {
-        guard let realm = try? Realm() else { print("Realmインスタンスの生成に失敗"); return }
-        stockedIppoList = realm.objects(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray: [IPPOStatus.stock.rawValue]))
+        stockedIppoList = fetch(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray: [IPPOStatus.stock.rawValue]))
     }
 }
 

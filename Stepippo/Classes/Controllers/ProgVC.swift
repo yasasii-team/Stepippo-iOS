@@ -12,15 +12,39 @@ class ProgVC: UIViewController {
 
     
     @IBAction func checkClicked1(_ sender: CheckButton) {
-        print(sender.isChecked)
+        
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+        }) { (success) in
+            sender.isSelected = !sender.isSelected
+            UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+                sender.transform = .identity
+            }, completion: nil)
+        }
     }
     
     @IBAction func checkClicked2(_ sender: CheckButton) {
-        print(sender.isChecked)
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            sender.isSelected = !sender.isSelected
+        }) { (success) in
+            
+            UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+                sender.transform = .identity
+            }, completion: nil)
+        }
     }
     
     @IBAction func checkClicked3(_ sender: CheckButton) {
-        print(sender.isChecked)
+        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            sender.isSelected = !sender.isSelected
+        }) { (success) in
+            
+            UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+                sender.transform = .identity
+            }, completion: nil)
+        }
     }
     
     override func viewDidLoad() {

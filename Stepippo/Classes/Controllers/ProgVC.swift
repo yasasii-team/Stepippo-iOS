@@ -11,13 +11,13 @@ import UIKit
 class ProgVC: UIViewController {
 
     
-    @IBAction func checkClicked1(_ sender: CheckButton) {
+    @IBAction private func checkClicked1(_ sender: CheckButton) {
         
-        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+        UIView.animate(withDuration: 0.2, delay: 0.05, options: .curveLinear, animations: {
             sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
         }) { (success) in
-            sender.isSelected = !sender.isSelected
-            UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
+            sender.isSelected.toggle()
+            UIView.animate(withDuration: 0.2, delay: 0.05, options: .curveLinear, animations: {
                 sender.transform = .identity
             }, completion: nil)
         }

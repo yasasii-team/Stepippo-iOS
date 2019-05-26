@@ -12,39 +12,27 @@ class ProgVC: UIViewController {
 
     
     @IBAction private func checkClicked1(_ sender: CheckButton) {
-        
-        UIView.animate(withDuration: 0.2, delay: 0.05, options: .curveLinear, animations: {
-            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-        }) { (success) in
-            sender.isSelected.toggle()
-            UIView.animate(withDuration: 0.2, delay: 0.05, options: .curveLinear, animations: {
-                sender.transform = .identity
-            }, completion: nil)
-        }
+         animate(button: sender)
     }
     
     @IBAction func checkClicked2(_ sender: CheckButton) {
-        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
-            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-            sender.isSelected = !sender.isSelected
-        }) { (success) in
-            
-            UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
-                sender.transform = .identity
-            }, completion: nil)
-        }
+         animate(button: sender)
     }
     
     @IBAction func checkClicked3(_ sender: CheckButton) {
-        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
-            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-            sender.isSelected = !sender.isSelected
-        }) { (success) in
-            
-            UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
-                sender.transform = .identity
-            }, completion: nil)
-        }
+         animate(button: sender)
+    }
+    
+    private func animate(button: UIButton) {
+        UIView.animate(withDuration: 0.1,
+                       delay: 0.1,
+                       options: [.curveLinear, .autoreverse],
+                       animations: {
+                        button.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)},
+                       completion: { _ in
+                        button.transform = CGAffineTransform.identity
+                        button.isSelected.toggle()
+        })
     }
     
     override func viewDidLoad() {

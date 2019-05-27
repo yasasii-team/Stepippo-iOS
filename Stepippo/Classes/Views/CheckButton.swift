@@ -10,8 +10,8 @@ import UIKit
 
 final class CheckButton: UIButton {
     // Images
-    let checkedImage = UIImage(named: "Checkbox")!
-    let uncheckedImage = UIImage(named: "UnCheckbox")!
+    let checkedImage = UIImage(named: "Check_on")!
+    let uncheckedImage = UIImage(named: "Check_off")!
         
     // Bool property
     var isChecked: Bool = false {

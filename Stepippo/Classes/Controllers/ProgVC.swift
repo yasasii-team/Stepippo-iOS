@@ -11,16 +11,28 @@ import UIKit
 final class ProgVC: UIViewController {
 
     
-    @IBAction func checkClicked1(_ sender: CheckButton) {
-        print(sender.isChecked)
+    @IBAction private func checkClicked1(_ sender: CheckButton) {
+         animate(button: sender)
     }
     
     @IBAction func checkClicked2(_ sender: CheckButton) {
-        print(sender.isChecked)
+         animate(button: sender)
     }
     
     @IBAction func checkClicked3(_ sender: CheckButton) {
-        print(sender.isChecked)
+         animate(button: sender)
+    }
+    
+    private func animate(button: UIButton) {
+        UIView.animate(withDuration: 0.1,
+                       delay: 0.1,
+                       options: [.curveLinear, .autoreverse],
+                       animations: {
+                        button.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)},
+                       completion: { _ in
+                        button.transform = CGAffineTransform.identity
+                        button.isSelected.toggle()
+        })
     }
     
     @IBAction func didTapSeselectPeriodButton() {

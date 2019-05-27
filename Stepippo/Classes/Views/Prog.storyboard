@@ -133,7 +133,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="C6j-1k-KPA">
                                         <rect key="frame" x="69" y="0.0" width="150" height="49"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cw8-i3-GbH" customClass="CheckButton" customModule="Stepippo" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cw8-i3-GbH" customClass="CheckButton" customModule="Stepippo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="49"/>
                                                 <connections>
                                                     <action selector="checkClicked1:" destination="rJa-zS-PGh" eventType="touchUpInside" id="3Bm-f0-Xqz"/>
@@ -148,7 +148,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="fRa-Df-Nfa">
                                         <rect key="frame" x="69" y="77" width="150" height="49"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIk-yS-g2l" customClass="CheckButton" customModule="Stepippo" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIk-yS-g2l" customClass="CheckButton" customModule="Stepippo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="49"/>
                                                 <connections>
                                                     <action selector="checkClicked2:" destination="rJa-zS-PGh" eventType="touchUpInside" id="Nd6-uw-NAU"/>
@@ -163,7 +163,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="m38-vy-3lm">
                                         <rect key="frame" x="68.5" y="154" width="151" height="49"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLc-bK-HSY" customClass="CheckButton" customModule="Stepippo" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nLc-bK-HSY" customClass="CheckButton" customModule="Stepippo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="49"/>
                                                 <connections>
                                                     <action selector="checkClicked3:" destination="rJa-zS-PGh" eventType="touchUpInside" id="6jZ-02-izJ"/>

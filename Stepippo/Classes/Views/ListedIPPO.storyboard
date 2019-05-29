@@ -21,16 +21,19 @@
                         <viewLayoutGuide key="safeArea" id="3jn-us-kFk"/>
                     </view>
                     <navigationItem key="navigationItem" id="6oM-9x-vhy"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJd-k5-cGi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="544" y="785"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--タスク一覧-->
         <scene sceneID="f7V-Vb-8mR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5t5-Pc-6pP" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="タスク一覧" image="ListedBottomIcon" id="hoM-Uo-YDW"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Z1-IX-9yE">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -45,4 +48,7 @@
             <point key="canvasLocation" x="-307.5" y="784.85915492957747"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ListedBottomIcon" width="30" height="30"/>
+    </resources>
 </document>

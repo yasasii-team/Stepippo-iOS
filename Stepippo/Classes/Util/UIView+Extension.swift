@@ -43,4 +43,17 @@ extension UIView {
             }
         }
     }
+    
+    @IBInspectable var isCircle: Bool {
+        get {
+            return self.isCircle
+        }
+        set {
+            if newValue {
+                layer.cornerRadius = min(bounds.width, bounds.height) / 2
+            } else {
+                layer.cornerRadius = 0
+            }
+        }
+    }
 }

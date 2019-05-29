@@ -77,6 +77,11 @@
                                     <action selector="addButton:" destination="lf1-yo-U4p" eventType="touchUpInside" id="36K-pU-9GA"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v9o-2V-erA">
+                                <rect key="frame" x="0.0" y="613" width="414" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -104,12 +109,13 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="addtaskTextField" destination="amU-Xd-oCF" id="PpE-CX-4pi"/>
+                        <outlet property="addTaskTableView" destination="v9o-2V-erA" id="CxU-ug-a0q"/>
+                        <outlet property="addTaskTextField" destination="amU-Xd-oCF" id="WgC-e9-SFL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWj-Zm-Ntb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.2" y="134.48275862068965"/>
+            <point key="canvasLocation" x="1046.376811594203" y="133.92857142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sly-uu-jyb">

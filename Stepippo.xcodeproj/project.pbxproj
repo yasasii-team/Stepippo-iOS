@@ -16,7 +16,6 @@
 		6788A274226A0F1400E9B0D5 /* ListedIPPO.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6788A273226A0F1400E9B0D5 /* ListedIPPO.storyboard */; };
 		6788A276226A0F2100E9B0D5 /* AchievedIPPO.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6788A275226A0F2100E9B0D5 /* AchievedIPPO.storyboard */; };
 		6788A278226A0F2B00E9B0D5 /* StockedIPPO.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6788A277226A0F2B00E9B0D5 /* StockedIPPO.storyboard */; };
-		67920DB02262C2D200127083 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67920DAF2262C2D100127083 /* XLPagerTabStrip.framework */; };
 		8D071CB7225A4435004A4A69 /* Misc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D071CB6225A4435004A4A69 /* Misc.storyboard */; };
 		8D071CBA225A44CE004A4A69 /* MiscCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D071CB8225A44CE004A4A69 /* MiscCell.swift */; };
 		8D071CBB225A44CE004A4A69 /* MiscCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D071CB9225A44CE004A4A69 /* MiscCell.xib */; };
@@ -45,6 +44,7 @@
 		8DD50CF52289A33800098AA3 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD50CF42289A33800098AA3 /* Int+Extension.swift */; };
 		9173A4B222902180007749F0 /* IPPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9173A4B122902180007749F0 /* IPPO.swift */; };
 		981A34DF22986BF000D21868 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981A34DE22986BF000D21868 /* Date+Extension.swift */; };
+		98505F8B229ED3FA00AE0891 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67920DAF2262C2D100127083 /* XLPagerTabStrip.framework */; };
 		E7E97F6A2285B04700920B74 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E97F692285B04700920B74 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,7 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8E2856227B26EB00299B5B /* Realm.framework in Frameworks */,
-				67920DB02262C2D200127083 /* XLPagerTabStrip.framework in Frameworks */,
+				98505F8B229ED3FA00AE0891 /* XLPagerTabStrip.framework in Frameworks */,
 				8D8E2855227B26EB00299B5B /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

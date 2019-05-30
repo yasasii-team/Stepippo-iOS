@@ -11,6 +11,7 @@ import UIKit
 class AddTaskCell: UITableViewCell {
 
     @IBOutlet weak var addTaskLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

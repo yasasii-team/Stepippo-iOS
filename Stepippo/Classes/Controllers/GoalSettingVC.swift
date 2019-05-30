@@ -11,11 +11,12 @@ import UIKit
 /// タスクの目標を設定する画面
 final class GoalSettingVC: UIViewController {
     
-    var addTaskCount = 0
-    
+    var taskArray: [String?] = []
+
     // MARK: - IBOutlet properties
     @IBOutlet private weak var addTaskTextField: UITextField!
     @IBOutlet private weak var addTaskTableView: UITableView!
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     
     // MARK: - IBAction methods
     @IBAction func stopButton(_ sender: Any) {
@@ -26,18 +27,23 @@ final class GoalSettingVC: UIViewController {
     }
     
     @IBAction func addButton(_ sender: Any) {
-        if addTaskCount < 4 {
-            addTaskCount = addTaskCount + 1
-        } else {
-            // アラート処理
-        }
+        guard addTaskTextField.text != "" else { return }
         
+        if tableViewHeight.constant < 150 {
+            tableViewHeight.constant += 50
+        }
+        if taskArray.count < 3 {
+            taskArray.append(addTaskTextField.text)
+            addTaskTableView.reloadData()
+        }
     }
     
     // MARK: - Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         addTaskTextField.delegate = self
+        addTaskTableView.delegate = self
+        addTaskTableView.dataSource = self
         addTaskTableView.register(UINib(nibName: "AddTaskCell", bundle: nil), forCellReuseIdentifier: "AddTaskCell")
     }
 }
@@ -60,14 +66,17 @@ extension GoalSettingVC: UITextFieldDelegate {
 
 extension GoalSettingVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return addTaskCount
+        return taskArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as? AddTaskCell {
-            return cell
-        }
-        return UITableViewCell()
+        let cell = addTaskTableView.dequeueReusableCell(withIdentifier: "AddTaskCell") as! AddTaskCell
+        cell.addTaskLabel.text = taskArray[indexPath.row]
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
 }
 

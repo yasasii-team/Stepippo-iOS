@@ -9,7 +9,6 @@
 import UIKit
 
 final class ProgVC: UIViewController {
-
     
     @IBAction func checkClicked1(_ sender: CheckButton) {
         print(sender.isChecked)
@@ -44,6 +43,10 @@ final class ProgVC: UIViewController {
         
         // アクションシートを表示する
         present(actionSheet, animated: true, completion: nil)
+        
+        // UserDefaults のインスタンス
+        _ = UserDefaults.standard
+         UserDefaults.standard.set(true, forKey: "periodUpdate")
     }
     
     // アクションシートで選択した時の処理
@@ -53,7 +56,5 @@ final class ProgVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
     }
 }

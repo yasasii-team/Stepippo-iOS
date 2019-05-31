@@ -16,7 +16,7 @@ final class GoalSettingVC: UIViewController {
     // MARK: - IBOutlet properties
     @IBOutlet private weak var addTaskTextField: UITextField!
     @IBOutlet private weak var addTaskTableView: UITableView!
-    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var tableViewHeight: NSLayoutConstraint!
     
     // MARK: - IBAction methods
     @IBAction func stopButton(_ sender: Any) {

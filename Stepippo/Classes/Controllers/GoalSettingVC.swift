@@ -35,6 +35,7 @@ final class GoalSettingVC: UIViewController {
         if taskArray.count < 3 {
             taskArray.append(addTaskTextField.text)
             addTaskTableView.reloadData()
+            addTaskTextField.text = ""
         }
     }
     

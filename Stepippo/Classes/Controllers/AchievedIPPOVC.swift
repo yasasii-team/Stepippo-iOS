@@ -1,10 +1,17 @@
+//
+//  AchievedIPPOVC.swift
+//  Stepippo
+//
+//  Created by Sab on 2019/5/25.
+//  Copyright © 2019 Yasasii-kai. All rights reserved.
+//
+
 import UIKit
 import RealmSwift
 import XLPagerTabStrip
 
 final class AchievedIPPOVC: UIViewController, RealmObjectAccessible {
 
-    private let sections = ["先週", "今月", "今年"]
     private var achievedIppoList: Results<IPPO>?
     
     // 先週の達成済みリスト
@@ -61,15 +68,14 @@ final class AchievedIPPOVC: UIViewController, RealmObjectAccessible {
     }
     
     private func getSelectedIppo(index: IndexPath) -> IPPO? {
-        switch index.section {
-        case 0:
+        guard let sectionType = SectionType(rawValue: index.section) else { return nil }
+        switch sectionType {
+        case .lastWeek:
             return achievedIppoListInLastWeek?[index.row]
-        case 1:
+        case .currentMonth:
             return achievedIppoListInCurrentMonth?[index.row]
-        case 2:
+        case .currentYear:
             return achievedIppoListInCurrentYear?[index.row]
-        default:
-            return nil
         }
     }
 }
@@ -82,23 +88,22 @@ extension AchievedIPPOVC: IndicatorInfoProvider {
 
 extension AchievedIPPOVC: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return sections.count
+        return SectionType.allCases.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section]
+        return SectionType.allCases[section].title
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
+        guard let sectionType = SectionType(rawValue: section) else { return 0 }
+        switch sectionType {
+        case .lastWeek:
             return achievedIppoListInLastWeek?.count ?? 0
-        case 1:
+        case .currentMonth:
             return achievedIppoListInCurrentMonth?.count ?? 0
-        case 2:
+        case .currentYear:
             return achievedIppoListInCurrentYear?.count ?? 0
-        default:
-            return 0
         }
     }
     
@@ -130,7 +135,7 @@ extension AchievedIPPOVC: UITableViewDelegate {
         let stockAction = UIContextualAction(style: .normal, title: "Stock") { (_, _, completion) in
             guard let realm = try? Realm() else { print("Realmインスタンスの生成に失敗"); return }
             try? realm.write { [weak self] in
-                self?.getSelectedIppo(index: indexPath)?._status = IPPOStatus.stock.rawValue
+                self?.getSelectedIppo(index: indexPath)?.status = IPPOStatus.stock
                 tableView.reloadData()
                 completion(true)
             }
@@ -139,6 +144,24 @@ extension AchievedIPPOVC: UITableViewDelegate {
         return UISwipeActionsConfiguration(actions: [deleteAction, stockAction])
     }
 }
+
+private enum SectionType: Int, CaseIterable {
+    case lastWeek = 0
+    case currentMonth
+    case currentYear
+    
+    var title: String {
+        switch self {
+        case .lastWeek:
+            return "先週"
+        case .currentMonth:
+            return "今月"
+        case .currentYear:
+            return "今年"
+        }
+    }
+}
+
 // TODO: 別ファイルにして設定画面と共通化
 enum WeekDay: String, CaseIterable {
     case sun = "日曜日"

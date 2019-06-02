@@ -46,7 +46,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="showActionSheet" destination="rJa-zS-PGh" eventType="touchUpInside" id="ae2-NB-dy3"/>
+                                                    <action selector="didTapSeselectPeriodButton" destination="rJa-zS-PGh" eventType="touchUpInside" id="UTV-dl-u7j"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="残り2日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMm-BU-hLq">

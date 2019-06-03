@@ -9,7 +9,6 @@
 import UIKit
 
 final class ProgVC: UIViewController {
-
     
     @IBAction private func checkClicked1(_ sender: CheckButton) {
          animate(button: sender)
@@ -57,15 +56,20 @@ final class ProgVC: UIViewController {
         // アクションシートを表示する
         present(actionSheet, animated: true, completion: nil)
     }
-    
     // アクションシートで選択した時の処理
     private func actionSheetChoose(sender: UIAlertAction) {
-        print("\(sender.title!)に変更しました")
+        
+        // UserDefaults のインスタンス
+        let userDefaults = UserDefaults.standard
+        // 選択した期間を「deadlineCycle」という名前(key)でUserDefaultsに保存する
+        userDefaults.set(sender.title, forKey: "deadlineCycle")
+        
+        // UserDefaultsに今保存した値を確認する
+        let nowDeadlineCycle = userDefaults.string(forKey: "deadlineCycle") ?? "deadlineCycleは保存されていません"
+        print("期間設定: \(nowDeadlineCycle)")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
     }
 }

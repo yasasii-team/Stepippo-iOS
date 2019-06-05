@@ -63,13 +63,14 @@ final class ProgVC: UIViewController {
         let userDefaults = UserDefaults.standard
         // 選択した期間を「deadlineCycle」という名前(key)でUserDefaultsに保存する
         userDefaults.set(sender.title, forKey: "deadlineCycle")
-        
-        // UserDefaultsに今保存した値を確認する
-        let nowDeadlineCycle = userDefaults.string(forKey: "deadlineCycle") ?? "deadlineCycleは保存されていません"
-        print("期間設定: \(nowDeadlineCycle)")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // UserDefaults のインスタンス
+        let userDefaults = UserDefaults.standard
+        // UserDefaultsに今保存した値を確認する
+        let nowDeadlineCycle = userDefaults.string(forKey: "deadlineCycle") ?? "deadlineCycleは保存されていません"
+        print("期間設定: \(nowDeadlineCycle)")
     }
 }

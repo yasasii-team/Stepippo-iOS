@@ -11,7 +11,7 @@ import UIKit
 /// タスクの目標を設定する画面
 final class GoalSettingVC: UIViewController {
     
-    var taskArray: [String?] = []
+    var taskArray: [String] = []
 
     // MARK: - IBOutlet properties
     @IBOutlet private weak var addTaskTextField: UITextField!
@@ -33,7 +33,8 @@ final class GoalSettingVC: UIViewController {
             tableViewHeight.constant += 50
         }
         if taskArray.count < 3 {
-            taskArray.append(addTaskTextField.text)
+            guard let task = addTaskTextField.text else { return }
+            taskArray.append(task)
             addTaskTableView.reloadData()
             addTaskTextField.text = ""
         }
@@ -52,8 +53,6 @@ final class GoalSettingVC: UIViewController {
 // MARK: - TextField fields
 extension GoalSettingVC: UITextFieldDelegate {
     
-    // MARK: - TextField properties
-    
     // MARK: - TextField methods
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         addTaskTextField.resignFirstResponder()
@@ -65,7 +64,11 @@ extension GoalSettingVC: UITextFieldDelegate {
     }
 }
 
+// MARK: - TableView fields
+
 extension GoalSettingVC: UITableViewDelegate, UITableViewDataSource {
+    
+    // MARK: - TableView methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return taskArray.count
     }

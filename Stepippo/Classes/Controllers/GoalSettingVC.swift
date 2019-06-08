@@ -82,5 +82,13 @@ extension GoalSettingVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            taskArray.remove(at: indexPath.row)
+            addTaskTableView.deleteRows(at: [indexPath], with: .fade)
+            tableViewHeight.constant -= 50
+        }
+    }
 }
 

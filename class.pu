@@ -1,0 +1,86 @@
+@startuml
+title Class図
+
+' プロトコル定義
+Interface RealmObjectAccessibe << (P, Pink) >> {
+    fetch()
+    write()
+}
+
+' 列挙型定義
+enum SectionType {
+
+}
+
+' 構造体定義
+class GitHubIssue << (S, PaleGreen) >> {
+    htmlUrl: String
+    title: String
+    createdAt: String
+    updatedAt: String
+    assignee: Assignee
+}
+class Assignee << (S, PaleGreen) >> {
+    avatarUrl: String
+}
+
+' クラス定義
+class GoalSettingVC {
+    - field
+    method()
+}
+class ProgVC {
+
+}
+class ListedIPPOVC {
+
+}
+class StockedIPPOVC {
+
+}
+class ArchivedIPPOVC {
+
+}
+class MiscVC {
+
+}
+
+GoalSettingVC -> RealmObjectAccessibe
+
+ProgVC -> RealmObjectAccessibe
+
+ListedIPPOVC -> RealmObjectAccessibe
+
+StockedIPPOVC -> RealmObjectAccessibe
+
+ArchivedIPPOVC -> RealmObjectAccessibe
+
+MiscVC -> GitHubIssue
+
+@enduml
+
+関係性
+クラス名 線種の記号 クラス名 [: ラベル]
+
+スタティック
+{static}
+
+可視性
+- private
+# protected
+~ package private
++ public
+
+コメント
+note position of クラス名 : コメント
+クラスの定義
+note position : コメント
+
+Extension(拡張)
+ABC <|-- XYZ
+
+Composition（組成）
+ABC *-- XYZ
+
+Aggregation（集約）
+ABC o-- XYZ

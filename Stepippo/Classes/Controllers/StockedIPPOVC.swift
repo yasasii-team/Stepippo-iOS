@@ -13,7 +13,7 @@ final class StockedIPPOVC: UIViewController, RealmObjectAccessible {
     }
     
     private func getStockedIppo() {
-        stockedIppoList = fetch(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray: [IPPOStatus.stock.rawValue]))
+        stockedIppoList = fetch(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray: [IPPOStatus.stock.rawValue])).sorted(byKeyPath: "addDateTime", ascending: false)
     }
 }
 
@@ -24,13 +24,8 @@ extension StockedIPPOVC: IndicatorInfoProvider {
 }
 
 extension StockedIPPOVC: UITableViewDataSource {
-    // TODO: セクション分けとセクションヘッダーの表示
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stockedIppoList?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "SECTION HEADING"
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

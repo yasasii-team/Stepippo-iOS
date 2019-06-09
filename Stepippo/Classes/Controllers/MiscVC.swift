@@ -137,8 +137,14 @@ extension MiscVC: UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "miscCell", for: indexPath) as! MiscCell
                 cell.iconImage.image = #imageLiteral(resourceName: "DayOfWeekToStart")
                 cell.titleLabel.text = "週の開始曜日"
-                // UserDefaultsに記憶している設定を使用
-                cell.detailLabel.text = userDefault.string(forKey: "dayOfWeekToStart") ?? "月曜日"
+                // UserDefaultsで記憶している曜日情報を取得
+                let weekdayIndex = userDefault.integer(forKey: "dayOfWeekToStart")
+                // 曜日表示用フォーマットを設定
+                let formatter = DateFormatter()
+                formatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "EEEE", options: 0, locale: Locale.autoupdatingCurrent)
+                // 曜日を配列から取得
+                let weekday = formatter.weekdaySymbols[weekdayIndex]
+                cell.detailLabel.text = weekday
                 return cell
 
             case .dateToStart:
@@ -234,13 +240,14 @@ extension MiscVC: UITableViewDelegate {
                 let alert = UIAlertController(title: "何曜日からスタートしますか？",
                                               message: "期限を1週間とした時の基準となる曜日を選択してください",
                                               preferredStyle: .actionSheet)
-                
-                let weeks = ["月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日", "日曜日"]
-                
-                for week in weeks {
+                // 曜日を取得するためのフォーマット
+                let df = DateFormatter()
+                df.dateFormat = DateFormatter.dateFormat(fromTemplate: "EEEE", options: 0, locale: Locale.autoupdatingCurrent)
+                // 曜日を配列から取得
+                for (index, week) in df.weekdaySymbols.enumerated() {
                     alert.addAction(UIAlertAction(title: week, style: .default) { [weak self] _ in
                         // 選択した曜日を記憶
-                        self?.userDefault.set(week, forKey: "dayOfWeekToStart")
+                        self?.userDefault.set(index, forKey: "dayOfWeekToStart")
                         cell.detailLabel.text = week
                         cell.detailLabel.isHidden = false
                     })

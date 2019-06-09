@@ -94,7 +94,7 @@ extension MiscVC: UITableViewDataSource {
             return "アプリを削除すると設定も削除されます"
             
         case .aboutThisApp:
-            return "Steppipo (v1.0.0) Developed by やさしい会 iOSチーム"
+            return "Stepippo (v1.0.0) Developed by やさしい会 iOSチーム"
         }
     }
     

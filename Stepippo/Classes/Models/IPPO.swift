@@ -41,4 +41,9 @@ class IPPO: Object {
             _status = newValue.rawValue
         }
     }
+    
+    // 主キーを設定
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

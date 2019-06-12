@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		0B04AA7A227A9D5100E18F0A /* ProgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B04AA79227A9D5100E18F0A /* ProgVC.swift */; };
 		0B04AA7C227A9DB200E18F0A /* Prog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B04AA7B227A9DB200E18F0A /* Prog.storyboard */; };
-		0BF9DA91228464A70021096A /* ProgCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF9DA90228464A70021096A /* ProgCheckButton.swift */; };
+		0BF9DA91228464A70021096A /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF9DA90228464A70021096A /* CheckButton.swift */; };
 		6788A26E226A0ED000E9B0D5 /* ListedIPPOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788A26D226A0ED000E9B0D5 /* ListedIPPOVC.swift */; };
 		6788A270226A0EEA00E9B0D5 /* AchievedIPPOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788A26F226A0EEA00E9B0D5 /* AchievedIPPOVC.swift */; };
 		6788A272226A0EFA00E9B0D5 /* StockedIPPOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6788A271226A0EFA00E9B0D5 /* StockedIPPOVC.swift */; };
 		6788A274226A0F1400E9B0D5 /* ListedIPPO.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6788A273226A0F1400E9B0D5 /* ListedIPPO.storyboard */; };
 		6788A276226A0F2100E9B0D5 /* AchievedIPPO.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6788A275226A0F2100E9B0D5 /* AchievedIPPO.storyboard */; };
 		6788A278226A0F2B00E9B0D5 /* StockedIPPO.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6788A277226A0F2B00E9B0D5 /* StockedIPPO.storyboard */; };
-		67920DB02262C2D200127083 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67920DAF2262C2D100127083 /* XLPagerTabStrip.framework */; };
 		8D071CB7225A4435004A4A69 /* Misc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D071CB6225A4435004A4A69 /* Misc.storyboard */; };
 		8D071CBA225A44CE004A4A69 /* MiscCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D071CB8225A44CE004A4A69 /* MiscCell.swift */; };
 		8D071CBB225A44CE004A4A69 /* MiscCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D071CB9225A44CE004A4A69 /* MiscCell.xib */; };
@@ -46,13 +45,15 @@
 		9173A4B222902180007749F0 /* IPPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9173A4B122902180007749F0 /* IPPO.swift */; };
 		E7D8326F2295939E00FA81DA /* AddTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8326D2295939E00FA81DA /* AddTaskCell.swift */; };
 		E7D832702295939E00FA81DA /* AddTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7D8326E2295939E00FA81DA /* AddTaskCell.xib */; };
+		981A34DF22986BF000D21868 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981A34DE22986BF000D21868 /* Date+Extension.swift */; };
+		98505F8B229ED3FA00AE0891 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67920DAF2262C2D100127083 /* XLPagerTabStrip.framework */; };
 		E7E97F6A2285B04700920B74 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E97F692285B04700920B74 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B04AA79227A9D5100E18F0A /* ProgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgVC.swift; sourceTree = "<group>"; };
 		0B04AA7B227A9DB200E18F0A /* Prog.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Prog.storyboard; sourceTree = "<group>"; };
-		0BF9DA90228464A70021096A /* ProgCheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgCheckButton.swift; sourceTree = "<group>"; };
+		0BF9DA90228464A70021096A /* CheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
 		6788A26D226A0ED000E9B0D5 /* ListedIPPOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListedIPPOVC.swift; sourceTree = "<group>"; };
 		6788A26F226A0EEA00E9B0D5 /* AchievedIPPOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievedIPPOVC.swift; sourceTree = "<group>"; };
 		6788A271226A0EFA00E9B0D5 /* StockedIPPOVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockedIPPOVC.swift; sourceTree = "<group>"; };
@@ -91,6 +92,7 @@
 		9173A4B122902180007749F0 /* IPPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPPO.swift; sourceTree = "<group>"; };
 		E7D8326D2295939E00FA81DA /* AddTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskCell.swift; sourceTree = "<group>"; };
 		E7D8326E2295939E00FA81DA /* AddTaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskCell.xib; sourceTree = "<group>"; };
+		981A34DE22986BF000D21868 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		E7E97F692285B04700920B74 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,7 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D8E2856227B26EB00299B5B /* Realm.framework in Frameworks */,
-				67920DB02262C2D200127083 /* XLPagerTabStrip.framework in Frameworks */,
+				98505F8B229ED3FA00AE0891 /* XLPagerTabStrip.framework in Frameworks */,
 				8D8E2855227B26EB00299B5B /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +151,7 @@
 				0B04AA7B227A9DB200E18F0A /* Prog.storyboard */,
 				E7D8326D2295939E00FA81DA /* AddTaskCell.swift */,
 				E7D8326E2295939E00FA81DA /* AddTaskCell.xib */,
+				0BF9DA90228464A70021096A /* CheckButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,7 +167,6 @@
 				6788A26F226A0EEA00E9B0D5 /* AchievedIPPOVC.swift */,
 				6788A271226A0EFA00E9B0D5 /* StockedIPPOVC.swift */,
 				0B04AA79227A9D5100E18F0A /* ProgVC.swift */,
-				0BF9DA90228464A70021096A /* ProgCheckButton.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -224,6 +226,7 @@
 			children = (
 				8DD50CF42289A33800098AA3 /* Int+Extension.swift */,
 				E7E97F692285B04700920B74 /* UIView+Extension.swift */,
+				981A34DE22986BF000D21868 /* Date+Extension.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				0B04AA7A227A9D5100E18F0A /* ProgVC.swift in Sources */,
 				8DD50CF52289A33800098AA3 /* Int+Extension.swift in Sources */,
 				E7E97F6A2285B04700920B74 /* UIView+Extension.swift in Sources */,
+				981A34DF22986BF000D21868 /* Date+Extension.swift in Sources */,
 				8D0B3A0522625C0900B71A7C /* SelectableCell.swift in Sources */,
 				8D8FB762226A1AA60063D8EC /* GitHubAPIClient.swift in Sources */,
 				8D8FB768226B47CE0063D8EC /* EnhancementIssueVC.swift in Sources */,
@@ -356,7 +360,7 @@
 				8DD50CF02285E92A00098AA3 /* RealmObjectAccessible.swift in Sources */,
 				8D29221222460A790046917F /* AppDelegate.swift in Sources */,
 				8D0B3A0C22676AF900B71A7C /* GoalSettingVC.swift in Sources */,
-				0BF9DA91228464A70021096A /* ProgCheckButton.swift in Sources */,
+				0BF9DA91228464A70021096A /* CheckButton.swift in Sources */,
 				8D071CBA225A44CE004A4A69 /* MiscCell.swift in Sources */,
 				8D8FB76C226B65A60063D8EC /* BugIssueVC.swift in Sources */,
 			);
@@ -435,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -490,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -518,7 +522,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = team.yasasii.Stepippo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -540,7 +544,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = team.yasasii.Stepippo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -1,0 +1,201 @@
+@startuml
+title Class図
+
+' ----------------------------------------
+' 共通Model
+' ----------------------------------------
+class IPPO {
+    id: String
+    title: String
+    _status: String
+    status: IPPOStatus
+    addDateTime: Date
+    performedDateTime: Date?
+}
+
+enum IPPOStatus {
+    stock
+    challenging
+    performed
+    achieved
+}
+
+Interface RealmObjectAccessibe << (P, Pink) >> {
+    fetch(objectType:predicate:sortKeyPath:isAccending:) -> Results<T>
+    write(object:isUpdate:)
+    update(primaryKey:values:isUpdate:)
+    delete(object:)
+    deleteAll()
+    createIncrementedPrimaryKey(objectType:) -> Int
+}
+
+' ----------------------------------------
+' 画面定義
+' ----------------------------------------
+package 目標設定画面 #efe {
+    class GoalSettingVC {
+
+    }
+}
+
+package 進捗画面 #fee {
+    class ProgVC {
+
+    }
+    class CheckButton {
+    checkedImage: UIImage
+    uncheckedImage: UIImage
+    isChecked: Bool
+    awakeFromNib()
+    buttonClicked(sender:)
+    }
+}
+
+package IPPOリスト画面 #eef {
+    class ListedIPPOVC {
+
+    }
+    class StockedIPPOVC {
+
+    }
+    class ArchivedIPPOVC {
+
+    }
+}
+
+package MiscVC #eff {
+    class MiscVC {
+
+    }
+    class BugIssueVC {
+
+    }
+    class EnhancementIssueVC {
+
+    }
+    class MiscCell {
+        iconImage: UIImageView!
+        titleLabel: UILabel!
+        detailLabel: UILabel!
+    }
+    class SelectableCell {
+        iconImage: UIImageView!
+        titleLabel: UILabel!
+        segmentedControl: UISegmentedControl!   
+    }
+    class SubtitleAndIconCell {
+        iconImage: UIImageView!
+        titleLabel: UILabel!
+        subtitleLabel: UILabel!
+        configure(image:title:subtitle:)
+    }
+    class GitHubAPIClient << (S, PaleGreen) >> {
+        - {static}repository
+        {static}getIssues(issueType:callback:)
+    }    
+    class GitHubIssue << (S, PaleGreen) >> {
+        htmlUrl: String
+        title: String
+        createdAt: String
+        updatedAt: String
+        assignee: Assignee
+    }
+}
+
+' ----------------------------------------
+' エクステンション定義
+' ----------------------------------------
+package Extension #eee {
+    class Int+Extension << (E, LightGray) >> {
+        incremented
+        decremented
+        mutating increment()
+        mutating decrement()
+    }
+    class Date+Extension << (E, LightGray) >> {
+        toFormattedString(format:) -> String
+    }
+    class UIView+Extension << (E, LightGray) >> {
+        cornerRadius: CGFloat
+        borderWidth: CGFloat
+        borderColor: UIColor?
+    }
+}
+
+' ----------------------------------------
+' 関連
+' ----------------------------------------
+IPPO --> IPPOStatus
+
+GitHubAPIClient --> GitHubIssue
+
+GoalSettingVC --> RealmObjectAccessibe
+GoalSettingVC --> IPPO
+
+ProgVC --> RealmObjectAccessibe
+ProgVC --> IPPO
+ProgVC *-- CheckButton
+
+ListedIPPOVC *-- StockedIPPOVC
+ListedIPPOVC *-- ArchivedIPPOVC
+
+StockedIPPOVC --> RealmObjectAccessibe
+StockedIPPOVC --> IPPO
+
+ArchivedIPPOVC --> RealmObjectAccessibe
+ArchivedIPPOVC --> IPPO
+
+MiscVC --> MiscCell
+MiscVC --> SelectableCell
+MiscVC --> SubtitleAndIconCell
+
+BugIssueVC --> GitHubAPIClient
+BugIssueVC --> GitHubIssue
+
+EnhancementIssueVC --> GitHubAPIClient
+EnhancementIssueVC --> GitHubIssue
+
+' ----------------------------------------
+' オプション設定
+' ----------------------------------------
+' 空のフィールドは表示しない
+hide empty members
+' 影をなくす
+skinparam shadowing false
+
+@enduml
+
+' ----------------------------------------
+' 使用方法まとめ
+' ----------------------------------------
+' 関係性
+クラス名 線種の記号 クラス名 [: ラベル]
+
+' スタティック
+{static}
+
+' 可視性
+- private
+# protected
+~ package private
++ public
+
+' 注釈
+note position of クラス名 : コメント
+
+クラスの定義の下に書く
+note position : コメント
+
+' 関連
+--
+<--
+' 汎化
+<|--
+' 実現
+<|..
+' Composition（合成）
+*-- 
+' Aggregation（集約）
+o-- 
+' 依存
+<..

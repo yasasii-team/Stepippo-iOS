@@ -1,4 +1,4 @@
-@startuml
+@startuml ClassDiagram
 title Class図
 
 ' ----------------------------------------

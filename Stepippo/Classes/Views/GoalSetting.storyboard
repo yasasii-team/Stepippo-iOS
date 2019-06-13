@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K0Z-pI-pC9">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,17 +15,17 @@
             <objects>
                 <viewController id="lf1-yo-U4p" customClass="GoalSettingVC" customModule="Stepippo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DeG-pb-48B">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IPPOを入力して追加しよう" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbg-v5-gfB">
-                                <rect key="frame" x="16" y="104" width="382" height="18"/>
+                                <rect key="frame" x="16" y="104" width="343" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="amU-Xd-oCF">
-                                <rect key="frame" x="16" y="138" width="382" height="36"/>
+                                <rect key="frame" x="16" y="138" width="343" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="joN-Va-Nv6"/>
                                 </constraints>
@@ -34,7 +34,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPd-En-dJE">
-                                <rect key="frame" x="16" y="190" width="185.66666666666666" height="50"/>
+                                <rect key="frame" x="16" y="190" width="166" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eGJ-yO-Y0X"/>
                                 </constraints>
@@ -57,7 +57,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysR-pk-NQp">
-                                <rect key="frame" x="212.66666666666663" y="190" width="185.33333333333337" height="50"/>
+                                <rect key="frame" x="193" y="190" width="166" height="50"/>
                                 <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TKh-B3-jrn"/>
@@ -77,20 +77,48 @@
                                     <action selector="addButton:" destination="lf1-yo-U4p" eventType="touchUpInside" id="36K-pU-9GA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKE-sT-Vcf">
+                                <rect key="frame" x="16" y="679" width="343" height="50"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LT0-Yq-jnH"/>
+                                </constraints>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="29i-J7-TVD">
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="KsI-qj-9e3"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="eLm-Bn-yLj" firstAttribute="trailing" secondItem="29i-J7-TVD" secondAttribute="trailing" id="1QG-ME-ebd"/>
                             <constraint firstItem="ysR-pk-NQp" firstAttribute="leading" secondItem="qPd-En-dJE" secondAttribute="trailing" constant="11" id="4ow-ER-KyP"/>
+                            <constraint firstItem="eLm-Bn-yLj" firstAttribute="bottom" secondItem="ZKE-sT-Vcf" secondAttribute="bottom" id="5Ul-wL-uXW"/>
                             <constraint firstItem="sbg-v5-gfB" firstAttribute="leading" secondItem="eLm-Bn-yLj" secondAttribute="leading" constant="16" id="8Wc-Mh-h5b"/>
+                            <constraint firstItem="29i-J7-TVD" firstAttribute="leading" secondItem="eLm-Bn-yLj" secondAttribute="leading" id="9eH-BL-qdu"/>
                             <constraint firstItem="eLm-Bn-yLj" firstAttribute="trailing" secondItem="amU-Xd-oCF" secondAttribute="trailing" constant="16" id="9nI-Zw-gQq"/>
                             <constraint firstItem="ysR-pk-NQp" firstAttribute="width" secondItem="qPd-En-dJE" secondAttribute="width" id="Cth-jJ-LFr"/>
                             <constraint firstItem="amU-Xd-oCF" firstAttribute="leading" secondItem="eLm-Bn-yLj" secondAttribute="leading" constant="16" id="JDP-iy-GNa"/>
                             <constraint firstItem="eLm-Bn-yLj" firstAttribute="trailing" secondItem="sbg-v5-gfB" secondAttribute="trailing" constant="16" id="Jfr-RC-GRB"/>
                             <constraint firstItem="sbg-v5-gfB" firstAttribute="top" secondItem="eLm-Bn-yLj" secondAttribute="top" constant="16" id="KeO-l2-cYa"/>
                             <constraint firstItem="eLm-Bn-yLj" firstAttribute="trailing" secondItem="ysR-pk-NQp" secondAttribute="trailing" constant="16" id="MCy-pY-2pd"/>
+                            <constraint firstItem="ZKE-sT-Vcf" firstAttribute="leading" secondItem="eLm-Bn-yLj" secondAttribute="leading" constant="16" id="NIz-Dg-wIs"/>
+                            <constraint firstItem="ZKE-sT-Vcf" firstAttribute="top" secondItem="29i-J7-TVD" secondAttribute="bottom" constant="12" id="PYI-Hp-o5I"/>
                             <constraint firstItem="qPd-En-dJE" firstAttribute="leading" secondItem="eLm-Bn-yLj" secondAttribute="leading" constant="16" id="R9h-DD-Yyh"/>
                             <constraint firstItem="amU-Xd-oCF" firstAttribute="top" secondItem="sbg-v5-gfB" secondAttribute="bottom" constant="16" id="S25-7b-JWu"/>
                             <constraint firstItem="qPd-En-dJE" firstAttribute="top" secondItem="amU-Xd-oCF" secondAttribute="bottom" constant="16" id="fd7-bO-clZ"/>
+                            <constraint firstItem="eLm-Bn-yLj" firstAttribute="trailing" secondItem="ZKE-sT-Vcf" secondAttribute="trailing" constant="16" id="hcv-qw-kOQ"/>
                             <constraint firstItem="ysR-pk-NQp" firstAttribute="baseline" secondItem="qPd-En-dJE" secondAttribute="baseline" id="xLG-fS-Fx4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eLm-Bn-yLj"/>
@@ -104,12 +132,14 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="addtaskTextField" destination="amU-Xd-oCF" id="PpE-CX-4pi"/>
+                        <outlet property="addTaskTableView" destination="29i-J7-TVD" id="OEH-IT-e8p"/>
+                        <outlet property="addTaskTextField" destination="amU-Xd-oCF" id="WgC-e9-SFL"/>
+                        <outlet property="tableViewHeight" destination="KsI-qj-9e3" id="Fw4-3m-a9a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWj-Zm-Ntb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.2" y="134.48275862068965"/>
+            <point key="canvasLocation" x="1045.5999999999999" y="133.74384236453201"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sly-uu-jyb">
@@ -117,7 +147,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K0Z-pI-pC9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j51-RF-Xec">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

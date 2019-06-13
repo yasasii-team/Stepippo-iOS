@@ -43,6 +43,8 @@
 		8DD50CF02285E92A00098AA3 /* RealmObjectAccessible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD50CEF2285E92A00098AA3 /* RealmObjectAccessible.swift */; };
 		8DD50CF52289A33800098AA3 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD50CF42289A33800098AA3 /* Int+Extension.swift */; };
 		9173A4B222902180007749F0 /* IPPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9173A4B122902180007749F0 /* IPPO.swift */; };
+		E7D8326F2295939E00FA81DA /* AddTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D8326D2295939E00FA81DA /* AddTaskCell.swift */; };
+		E7D832702295939E00FA81DA /* AddTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7D8326E2295939E00FA81DA /* AddTaskCell.xib */; };
 		981A34DF22986BF000D21868 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981A34DE22986BF000D21868 /* Date+Extension.swift */; };
 		98505F8B229ED3FA00AE0891 /* XLPagerTabStrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67920DAF2262C2D100127083 /* XLPagerTabStrip.framework */; };
 		E7E97F6A2285B04700920B74 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E97F692285B04700920B74 /* UIView+Extension.swift */; };
@@ -88,6 +90,8 @@
 		8DD50CEF2285E92A00098AA3 /* RealmObjectAccessible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObjectAccessible.swift; sourceTree = "<group>"; };
 		8DD50CF42289A33800098AA3 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		9173A4B122902180007749F0 /* IPPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPPO.swift; sourceTree = "<group>"; };
+		E7D8326D2295939E00FA81DA /* AddTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskCell.swift; sourceTree = "<group>"; };
+		E7D8326E2295939E00FA81DA /* AddTaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddTaskCell.xib; sourceTree = "<group>"; };
 		981A34DE22986BF000D21868 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		E7E97F692285B04700920B74 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +149,8 @@
 				6788A275226A0F2100E9B0D5 /* AchievedIPPO.storyboard */,
 				6788A277226A0F2B00E9B0D5 /* StockedIPPO.storyboard */,
 				0B04AA7B227A9DB200E18F0A /* Prog.storyboard */,
+				E7D8326D2295939E00FA81DA /* AddTaskCell.swift */,
+				E7D8326E2295939E00FA81DA /* AddTaskCell.xib */,
 				0BF9DA90228464A70021096A /* CheckButton.swift */,
 			);
 			path = Views;
@@ -287,6 +293,7 @@
 			files = (
 				6788A274226A0F1400E9B0D5 /* ListedIPPO.storyboard in Resources */,
 				8D071CBB225A44CE004A4A69 /* MiscCell.xib in Resources */,
+				E7D832702295939E00FA81DA /* AddTaskCell.xib in Resources */,
 				8D8E2852227B255100299B5B /* Cartfile in Resources */,
 				8D8FB76A226B651C0063D8EC /* BugIssue.storyboard in Resources */,
 				6788A278226A0F2B00E9B0D5 /* StockedIPPO.storyboard in Resources */,
@@ -348,6 +355,7 @@
 				6788A272226A0EFA00E9B0D5 /* StockedIPPOVC.swift in Sources */,
 				8D8FB764226B0AFD0063D8EC /* GitHubIssue.swift in Sources */,
 				8D8FB76F226B6F100063D8EC /* SubtitleAndIconCell.swift in Sources */,
+				E7D8326F2295939E00FA81DA /* AddTaskCell.swift in Sources */,
 				9173A4B222902180007749F0 /* IPPO.swift in Sources */,
 				8DD50CF02285E92A00098AA3 /* RealmObjectAccessible.swift in Sources */,
 				8D29221222460A790046917F /* AppDelegate.swift in Sources */,

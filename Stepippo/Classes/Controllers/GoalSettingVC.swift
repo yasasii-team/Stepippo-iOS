@@ -7,10 +7,10 @@
 //
 
 import UIKit
-
+import RealmSwift
 /// タスクの目標を設定する画面
 final class GoalSettingVC: UIViewController {
-    
+    let realm = try! Realm()
     var taskArray: [String] = []
 
     // MARK: - IBOutlet properties
@@ -24,6 +24,16 @@ final class GoalSettingVC: UIViewController {
     }
     
     @IBAction func stockButton(_ sender: Any) {
+        let ippo = IPPO()
+        ippo.id = "1"
+        ippo.title = addTaskTextField.text!
+        ippo.status = IPPOStatus.stock
+        ippo.addDateTime = Date()
+        ippo.performedDateTime = Date()
+        try! self.realm.write {
+            self.realm.add(ippo, update: true)
+        }
+
     }
     
     @IBAction func addButton(_ sender: Any) {

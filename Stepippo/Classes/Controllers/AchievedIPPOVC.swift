@@ -12,17 +12,17 @@ import XLPagerTabStrip
 
 final class AchievedIPPOVC: UIViewController, RealmObjectAccessible {
 
+    @IBOutlet private weak var tableView: UITableView!
     private var achievedIppoList: Results<IPPO>?
     
     // 先週の達成済みリスト
     private var achievedIppoListInLastWeek: Results<IPPO>? {
         // 週の初めの設定を取得
-        let symbolFromUd = UserDefaults.standard.string(forKey: "dayOfWeekToStart") ?? "月曜日"
-        
+        let symbolIndexFromUd = UserDefaults.standard.integer(forKey: "dayOfWeekToStart")
+
         // 今週の開始日を計算
         var calendar = Calendar(identifier: .gregorian)
-        let weekDay = calendar.weekdaySymbols.firstIndex(of: WeekDay(rawValue: symbolFromUd)!.toGregorian)!
-        calendar.firstWeekday = weekDay
+        calendar.firstWeekday = symbolIndexFromUd
         let startOfWeek = calendar.date(from: calendar.dateComponents([.weekOfYear, .yearForWeekOfYear], from: Date()))!
         
         // 先週の開始日を計算
@@ -60,11 +60,17 @@ final class AchievedIPPOVC: UIViewController, RealmObjectAccessible {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getAchievedIppo()
+        tableView.reloadData()
     }
     
     private func getAchievedIppo() {
         achievedIppoList = fetch(IPPO.self, predicate: NSPredicate(format: "_status = %@", argumentArray: [IPPOStatus.achieved.rawValue]))
+        
     }
     
     private func getSelectedIppo(index: IndexPath) -> IPPO? {

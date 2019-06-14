@@ -40,7 +40,7 @@ private extension MiscVC {
         
         enum Setting: Int, CaseIterable {
             case firstViewOfIppoList
-            case timeToStart
+            case timeOfDayToStart
             case dayOfWeekToStart
             case dateToStart
         }
@@ -125,12 +125,17 @@ extension MiscVC: UITableViewDataSource {
                 }
                 return cell
 
-            case .timeToStart:
+            case .timeOfDayToStart:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "miscCell", for: indexPath) as! MiscCell
                 cell.iconImage.image = #imageLiteral(resourceName: "24Times")
                 cell.titleLabel.text = "1日の開始時間"
-                // UserDefaultsに記憶している設定を使用
-                cell.detailLabel.text = userDefault.string(forKey: "timeToStart") ?? "0:00"
+                // UserDefaultsに記憶している時刻設定（分）を使用
+                let minute = userDefault.integer(forKey: "timeOfDayToStart")
+                let formatter = DateComponentsFormatter()
+                formatter.unitsStyle = .positional
+                formatter.allowedUnits = [.hour, .minute]
+                formatter.zeroFormattingBehavior = .pad
+                cell.detailLabel.text = formatter.string(from: DateComponents(minute: minute))
                 return cell
 
             case .dayOfWeekToStart:
@@ -227,7 +232,7 @@ extension MiscVC: UITableViewDelegate {
             
             switch row {
             case .firstViewOfIppoList: break
-            case .timeToStart:
+            case .timeOfDayToStart:
                 // TODO: 時間を設定する
                 break
                 

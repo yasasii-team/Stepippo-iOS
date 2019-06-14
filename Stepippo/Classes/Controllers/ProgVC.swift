@@ -78,15 +78,15 @@ final class ProgVC: UIViewController {
         switch userDefaults.string(forKey: "deadlineCycle") {
             
         case "毎日":
-            let timeOfDayToStart = userDefaults.integer(forKey: "timeOfDayToStart") + 1
+            let timeOfDayToStart = userDefaults.integer(forKey: "timeOfDayToStart")
             // 期日を計算
             let nextPeriod = calendar.date(bySetting: .minute, value: timeOfDayToStart, of: today)
             // 残り時間を計算
-            let remaining = calendar.dateComponents([.minute], from: today, to: nextPeriod!)
-            print("期日まで残り\(remaining.minute!)分")
+            let remaining = calendar.dateComponents([.hour, .minute], from: today, to: nextPeriod!)
+            print("期日まで残り\(remaining.hour!)時間と\(remaining.minute!)分")
             
             // TODO: 毎日の場合の計算
-            return "期日まで残り\(remaining.minute!)分"
+            return "期日まで残り\(remaining.hour!)時間と\(remaining.minute!)分"
             
         case "毎週":
             // UserDefaultsで保存してある曜日設定を取得
@@ -102,7 +102,7 @@ final class ProgVC: UIViewController {
             
         case "毎月":
             // UserDefaultsで保存してある曜日設定を取得
-            let dayOfMonthToStart = userDefaults.integer(forKey: "dayOfMonthToStart") + 1
+            let dayOfMonthToStart = userDefaults.integer(forKey: "dayOfMonthToStart")
             // 期日を計算
             let nextPeriod = calendar.date(bySetting: .day, value: dayOfMonthToStart, of: today)
             // 残り日数を計算

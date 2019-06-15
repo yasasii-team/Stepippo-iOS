@@ -11,15 +11,15 @@ import UIKit
 final class ProgVC: UIViewController {
     
     @IBAction private func checkClicked1(_ sender: CheckButton) {
-         animate(button: sender)
+        animate(button: sender)
     }
     
     @IBAction func checkClicked2(_ sender: CheckButton) {
-         animate(button: sender)
+        animate(button: sender)
     }
     
     @IBAction func checkClicked3(_ sender: CheckButton) {
-         animate(button: sender)
+        animate(button: sender)
     }
     
     private func animate(button: UIButton) {
@@ -102,12 +102,16 @@ final class ProgVC: UIViewController {
             
         case "毎月":
             // UserDefaultsで保存してある曜日設定を取得
+            // 設定されていない場合の初期値は31日（月末）とする
+            userDefaults.register(defaults: ["dayOfMonthToStart": 1])
             let dayOfMonthToStart = userDefaults.integer(forKey: "dayOfMonthToStart")
-            // 期日を計算
-            let nextPeriod = calendar.date(bySetting: .day, value: dayOfMonthToStart, of: today)
-            // 残り日数を計算
-            let remaining = calendar.dateComponents([.day], from: today, to: nextPeriod!)
-            print("期日まで残り\(remaining.day!)日")
+            // 取得した日付情報(Int)でDateComponentsを生成する
+            let components = DateComponents(day: dayOfMonthToStart)
+            // 次の「指定された日付」に当てはまる日付情報を取得する（例: 31日なら今月末の日付）
+            let deadline = calendar.nextDate(after: today, matching: components, matchingPolicy: .nextTime)
+            // 上記で算出した日付と今日の日付の差分を取得する
+            let remaining = calendar.dateComponents([.day, .hour], from: today, to: deadline!)
+            print("期日まで残り\(remaining.day!)日と\(remaining.hour!)時間")
             
             // TODO: 毎月の場合の計算
             return "残り\(remaining.day!)日"

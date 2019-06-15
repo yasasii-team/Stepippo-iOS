@@ -78,11 +78,12 @@ final class ProgVC: UIViewController {
         switch userDefaults.string(forKey: "deadlineCycle") {
             
         case "毎日":
+            // UserDefaultsで保存してある曜日設定を取得
             let timeOfDayToStart = userDefaults.integer(forKey: "timeOfDayToStart")
-            // 期日を計算
-            let nextPeriod = calendar.date(bySetting: .minute, value: timeOfDayToStart, of: today)
-            // 残り時間を計算
-            let remaining = calendar.dateComponents([.hour, .minute], from: today, to: nextPeriod!)
+            // 時間を計算
+            let endday = calendar.date(bySetting: .hour, value: timeOfDayToStart, of: today)
+            // // 上記で算出した時間と現時刻の差分を取得する
+            let remaining = calendar.dateComponents([.hour, .minute], from: today, to: endday!)
             print("期日まで残り\(remaining.hour!)時間と\(remaining.minute!)分")
             
             // TODO: 毎日の場合の計算

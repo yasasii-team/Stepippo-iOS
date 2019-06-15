@@ -98,8 +98,11 @@ final class ProgVC: UIViewController {
             // 残り日数を計算
             let remaining = calendar.dateComponents([.day, .hour], from: today, to: nextPeriod!)
             print("期日まで残り\(remaining.day!)日と\(remaining.hour!)時間")
-            
-            return "残り\(remaining.day!)日と\(remaining.hour!)時間"
+            //残り0日のときに時間のみを出力する
+            if remaining.day! == 0 {
+                return "残り\(remaining.hour!)時間"
+            }
+                return "残り\(remaining.day!)日と\(remaining.hour!)時間"
             
         case "毎月":
             // UserDefaultsで保存してある曜日設定を取得

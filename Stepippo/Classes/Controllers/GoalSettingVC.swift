@@ -23,9 +23,9 @@ final class GoalSettingVC: UIViewController, RealmObjectAccessible {
     
     @IBAction func stockButton(_ sender: Any) {
         
-        if addTaskTextField.text != nil && addTaskTextField.text != "" {
+        if let addTaskText = addTaskTextField.text, !addTaskTextField.text!.isEmpty {
             let ippo = IPPO()
-            ippo.title = addTaskTextField.text!
+            ippo.title = addTaskText
             ippo.status = .stock
             write(ippo)
         }            

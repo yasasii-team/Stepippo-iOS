@@ -64,12 +64,11 @@ final class ProgVC: UIViewController {
         // 選択した期間を「deadlineCycle」という名前(key)でUserDefaultsに保存する
         userDefaults.set(sender.title, forKey: "deadlineCycle")
     }
-
+    
     
     func calcRemainingPeriod() -> String {
         // 現在時刻を取得
         let today = Date()
-        print("現在日時: \(today)")
         // UserDefaultsのインスタンス
         let userDefaults = UserDefaults.standard
         // カレンダーのインスタンス
@@ -84,25 +83,22 @@ final class ProgVC: UIViewController {
             let endday = calendar.date(bySetting: .hour, value: timeOfDayToStart, of: today)
             // // 上記で算出した時間と現時刻の差分を取得する
             let remaining = calendar.dateComponents([.hour, .minute], from: today, to: endday!)
-            print("期日まで残り\(remaining.hour!)時間と\(remaining.minute!)分")
             
             // TODO: 毎日の場合の計算
-            return "期日まで残り\(remaining.hour!)時間と\(remaining.minute!)分"
+            return "残り\(remaining.hour!)時間\(remaining.minute!)分"
             
         case "毎週":
             // UserDefaultsで保存してある曜日設定を取得
             let dayOfWeekToStart = userDefaults.integer(forKey: "dayOfWeekToStart") + 1
             // 期日を計算
             let nextPeriod = calendar.date(bySetting: .weekday, value: dayOfWeekToStart, of: today)
-            print("期日: ", nextPeriod ?? "nil")
             // 残り日数を計算
             let remaining = calendar.dateComponents([.day, .hour], from: today, to: nextPeriod!)
-            print("期日まで残り\(remaining.day!)日と\(remaining.hour!)時間")
             //残り0日のときに時間のみを出力する
             if remaining.day! == 0 {
                 return "残り\(remaining.hour!)時間"
             }
-                return "残り\(remaining.day!)日と\(remaining.hour!)時間"
+            return "残り\(remaining.day!)日\(remaining.hour!)時間"
             
         case "毎月":
             // UserDefaultsで保存してある曜日設定を取得
@@ -115,8 +111,6 @@ final class ProgVC: UIViewController {
             let deadline = calendar.nextDate(after: today, matching: components, matchingPolicy: .nextTime)
             // 上記で算出した日付と今日の日付の差分を取得する
             let remaining = calendar.dateComponents([.day, .hour], from: today, to: deadline!)
-            print("期日まで残り\(remaining.day!)日と\(remaining.hour!)時間")
-            
             // TODO: 毎月の場合の計算
             return "残り\(remaining.day!)日"
             
@@ -126,15 +120,16 @@ final class ProgVC: UIViewController {
         }
     }
     
+    @IBOutlet weak var cycleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // UserDefaults のインスタンス
         let userDefaults = UserDefaults.standard
         // UserDefaultsに今保存した値を確認する
-        let nowDeadlineCycle = userDefaults.string(forKey: "deadlineCycle") ?? "deadlineCycleは保存されていません"
-        print("期間設定: \(nowDeadlineCycle)")
+        _ = userDefaults.string(forKey: "deadlineCycle") ?? "deadlineCycleは保存されていません"
+
         let result = calcRemainingPeriod()
-        print(result)
         
+        cycleLabel.text = result
     }
 }

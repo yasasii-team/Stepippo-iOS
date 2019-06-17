@@ -194,6 +194,9 @@
                     <navigationItem key="navigationItem" id="F8I-me-VVy">
                         <nil key="title"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cycleLabel" destination="ZMm-BU-hLq" id="6Gl-vq-uXx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbT-nJ-4ed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

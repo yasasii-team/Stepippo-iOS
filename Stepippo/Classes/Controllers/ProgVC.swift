@@ -10,6 +10,8 @@ import UIKit
 
 final class ProgVC: UIViewController {
     
+    @IBOutlet weak var cycleLabel: UILabel!
+    
     @IBAction private func checkClicked1(_ sender: CheckButton) {
         animate(button: sender)
     }
@@ -84,7 +86,6 @@ final class ProgVC: UIViewController {
             // // 上記で算出した時間と現時刻の差分を取得する
             let remaining = calendar.dateComponents([.hour, .minute], from: today, to: endday!)
             
-            // TODO: 毎日の場合の計算
             return "残り\(remaining.hour!)時間\(remaining.minute!)分"
             
         case "毎週":
@@ -101,8 +102,6 @@ final class ProgVC: UIViewController {
             return "残り\(remaining.day!)日\(remaining.hour!)時間"
             
         case "毎月":
-            // UserDefaultsで保存してある曜日設定を取得
-            // 設定されていない場合の初期値は31日（月末）とする
             userDefaults.register(defaults: ["dayOfMonthToStart": 1])
             let dayOfMonthToStart = userDefaults.integer(forKey: "dayOfMonthToStart")
             // 取得した日付情報(Int)でDateComponentsを生成する
@@ -111,7 +110,7 @@ final class ProgVC: UIViewController {
             let deadline = calendar.nextDate(after: today, matching: components, matchingPolicy: .nextTime)
             // 上記で算出した日付と今日の日付の差分を取得する
             let remaining = calendar.dateComponents([.day, .hour], from: today, to: deadline!)
-            // TODO: 毎月の場合の計算
+            
             return "残り\(remaining.day!)日"
             
         default:
@@ -119,14 +118,9 @@ final class ProgVC: UIViewController {
             return "TODO: default"
         }
     }
-    
-    @IBOutlet weak var cycleLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // UserDefaults のインスタンス
-        let userDefaults = UserDefaults.standard
-        // UserDefaultsに今保存した値を確認する
-        _ = userDefaults.string(forKey: "deadlineCycle") ?? "deadlineCycleは保存されていません"
 
         let result = calcRemainingPeriod()
         

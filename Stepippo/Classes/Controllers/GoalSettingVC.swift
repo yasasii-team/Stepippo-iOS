@@ -55,6 +55,13 @@ final class GoalSettingVC: UIViewController, RealmObjectAccessible {
         }
     }
     
+    @IBAction func doneButton(_ sender: Any) {
+        let ippo = IPPO()
+        ippo.title = taskArray.popLast()!
+        ippo.status = .achieved
+        ippo.performedDateTime = Date()
+        write(ippo)
+    }
     // MARK: - Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -131,8 +131,6 @@ final class ProgVC: UIViewController, RealmObjectAccessible {
         //未達成と達成中の数を加算し、挑戦中の数を算出する
         let currentIPPO = numberOfPerformedIPPO + numberOfChallengingIPPO
         
-        print("達成数 \(numberOfPerformedIPPO)/\(currentIPPO)")
-        
         return "達成数 \(numberOfPerformedIPPO)/\(currentIPPO)"
     }
     

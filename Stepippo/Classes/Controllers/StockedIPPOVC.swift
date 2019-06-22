@@ -56,7 +56,10 @@ extension StockedIPPOVC: UITableViewDelegate {
         let doneAction = UIContextualAction(style: .normal, title: "Done") { (_, _, completion) in
             guard let realm = try? Realm() else { print("Realmインスタンスの生成に失敗"); return }
             try? realm.write { [weak self] in
-                self?.stockedIppoList?[indexPath.row]._status = IPPOStatus.achieved.rawValue
+                if let ippo = self?.stockedIppoList?[indexPath.row] {
+                    ippo.status = .achieved
+                    ippo.performedDateTime = Date()
+                }
                 tableView.reloadData()
                 completion(true)
             }

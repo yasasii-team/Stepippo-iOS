@@ -4,12 +4,17 @@ import XLPagerTabStrip
 
 final class StockedIPPOVC: UIViewController, RealmObjectAccessible {
 
-    // TODO: リストのセクション分け
     private var stockedIppoList: Results<IPPO>?
+    @IBOutlet private weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getStockedIppo()
+        tableView.reloadData()
     }
     
     private func getStockedIppo() {

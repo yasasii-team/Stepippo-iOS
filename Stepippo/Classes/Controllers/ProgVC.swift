@@ -8,22 +8,24 @@
 
 import UIKit
 
-final class ProgVC: UIViewController {
+final class ProgVC: UIViewController, RealmObjectAccessible {
     
-    @IBOutlet weak var cycleLabel: UILabel!
+    @IBOutlet private weak var cycleLabel: UILabel!
+    
+    @IBOutlet private weak var achievedLabel: UILabel!
     
     @IBAction private func checkClicked1(_ sender: CheckButton) {
         animate(button: sender)
     }
     
-    @IBAction func checkClicked2(_ sender: CheckButton) {
+    @IBAction private func checkClicked2(_ sender: CheckButton) {
         animate(button: sender)
     }
     
-    @IBAction func checkClicked3(_ sender: CheckButton) {
+    @IBAction private func checkClicked3(_ sender: CheckButton) {
         animate(button: sender)
     }
-    
+    //チェックボタンのアニメーション
     private func animate(button: UIButton) {
         UIView.animate(withDuration: 0.1,
                        delay: 0.1,
@@ -36,7 +38,7 @@ final class ProgVC: UIViewController {
         })
     }
     
-    @IBAction func didTapSeselectPeriodButton() {
+    @IBAction private func didTapSeselectPeriodButton() {
         // アクションシートのタイトルとメッセージ
         let actionSheet = UIAlertController(title: "期間変更", message: "達成したい目標期間を選択してください", preferredStyle: .actionSheet)
         
@@ -67,7 +69,7 @@ final class ProgVC: UIViewController {
         userDefaults.set(sender.title, forKey: "deadlineCycle")
     }
     
-    
+    //設定期間に応じた、残り期間の算出
     func calcRemainingPeriod() -> String {
         // 現在時刻を取得
         let today = Date()
@@ -118,12 +120,28 @@ final class ProgVC: UIViewController {
             return "TODO: default"
         }
     }
-
+    //設定IPPO（タスク）に応じた達成数の算出
+    private func numberOfIPPO() -> String {
+        //達成数を取得する
+        //未達成の数
+    let numberOfChallengingIPPO = fetch(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray:[IPPOStatus.challenging.rawValue])).count
+        //達成中の数
+    let numberOfPerformedIPPO = fetch(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray:[IPPOStatus.performed.rawValue])).count
+        //未達成と達成中の数を加算し、挑戦中の数を算出する
+    let currentIPPO = numberOfPerformedIPPO + numberOfChallengingIPPO
+        
+        return "達成数 \(numberOfPerformedIPPO)/\(currentIPPO)"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //残り期間
         let result = calcRemainingPeriod()
         
         cycleLabel.text = result
+        //達成数
+        let progressIPPO = numberOfIPPO()
+        
+        achievedLabel.text = progressIPPO
     }
 }

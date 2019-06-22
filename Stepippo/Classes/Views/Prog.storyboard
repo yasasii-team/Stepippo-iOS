@@ -195,6 +195,7 @@
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="achievedLabel" destination="FUI-QW-NrS" id="Aka-u9-EmF"/>
                         <outlet property="cycleLabel" destination="ZMm-BU-hLq" id="6Gl-vq-uXx"/>
                     </connections>
                 </viewController>

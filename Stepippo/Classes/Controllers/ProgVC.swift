@@ -7,23 +7,22 @@
 //
 
 import UIKit
-import RealmSwift
 
 final class ProgVC: UIViewController, RealmObjectAccessible {
     
-    @IBOutlet weak var cycleLabel: UILabel!
+    @IBOutlet private weak var cycleLabel: UILabel!
     
-    @IBOutlet weak var achievedLabel: UILabel!
+    @IBOutlet private weak var achievedLabel: UILabel!
     
     @IBAction private func checkClicked1(_ sender: CheckButton) {
         animate(button: sender)
     }
     
-    @IBAction func checkClicked2(_ sender: CheckButton) {
+    @IBAction private func checkClicked2(_ sender: CheckButton) {
         animate(button: sender)
     }
     
-    @IBAction func checkClicked3(_ sender: CheckButton) {
+    @IBAction private func checkClicked3(_ sender: CheckButton) {
         animate(button: sender)
     }
     //チェックボタンのアニメーション
@@ -39,7 +38,7 @@ final class ProgVC: UIViewController, RealmObjectAccessible {
         })
     }
     
-    @IBAction func didTapSeselectPeriodButton() {
+    @IBAction private func didTapSeselectPeriodButton() {
         // アクションシートのタイトルとメッセージ
         let actionSheet = UIAlertController(title: "期間変更", message: "達成したい目標期間を選択してください", preferredStyle: .actionSheet)
         
@@ -122,14 +121,14 @@ final class ProgVC: UIViewController, RealmObjectAccessible {
         }
     }
     //設定IPPO（タスク）に応じた達成数の算出
-    func numberOfIPPO() -> String {
+    private func numberOfIPPO() -> String {
         //達成数を取得する
         //未達成の数
-        let numberOfChallengingIPPO = fetch(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray:[IPPOStatus.challenging.rawValue])).count
+    let numberOfChallengingIPPO = fetch(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray:[IPPOStatus.challenging.rawValue])).count
         //達成中の数
-        let numberOfPerformedIPPO = fetch(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray:[IPPOStatus.performed.rawValue])).count
+    let numberOfPerformedIPPO = fetch(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray:[IPPOStatus.performed.rawValue])).count
         //未達成と達成中の数を加算し、挑戦中の数を算出する
-        let currentIPPO = numberOfPerformedIPPO + numberOfChallengingIPPO
+    let currentIPPO = numberOfPerformedIPPO + numberOfChallengingIPPO
         
         return "達成数 \(numberOfPerformedIPPO)/\(currentIPPO)"
     }

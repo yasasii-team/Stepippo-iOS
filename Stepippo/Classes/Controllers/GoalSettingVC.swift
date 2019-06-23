@@ -28,7 +28,16 @@ final class GoalSettingVC: UIViewController, RealmObjectAccessible {
             ippo.title = addTaskText
             ippo.status = .stock
             write(ippo)
-        }            
+        } else {
+            let alert: UIAlertController = UIAlertController(title: "アラート表示", message: "タスク名が空です", preferredStyle:  UIAlertController.Style.alert)
+            let cancelAction: UIAlertAction = UIAlertAction(title: "タスク名を入力する", style: UIAlertAction.Style.cancel, handler:{
+                (action: UIAlertAction!) -> Void in
+                print("Cancel")
+            })
+            alert.addAction(cancelAction)
+            present(alert, animated: true, completion: nil)
+        }
+            
             
     }
     
@@ -46,6 +55,13 @@ final class GoalSettingVC: UIViewController, RealmObjectAccessible {
         }
     }
     
+    @IBAction func doneButton(_ sender: Any) {
+        let ippo = IPPO()
+        ippo.title = taskArray.popLast()!
+        ippo.status = .achieved
+        ippo.performedDateTime = Date()
+        write(ippo)
+    }
     // MARK: - Life cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()

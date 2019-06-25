@@ -8,7 +8,7 @@
 
 import UIKit
 /// タスクの目標を設定する画面
-final class GoalSettingVC: UIViewController, RealmObjectAccessible {
+final class GoalSettingVC: UIViewController, IPPORepository {
     var taskArray: [String] = []
 
     // MARK: - IBOutlet properties

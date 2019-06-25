@@ -40,7 +40,7 @@
 		8D8FB76C226B65A60063D8EC /* BugIssueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8FB76B226B65A60063D8EC /* BugIssueVC.swift */; };
 		8D8FB76F226B6F100063D8EC /* SubtitleAndIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8FB76D226B6F100063D8EC /* SubtitleAndIconCell.swift */; };
 		8D8FB770226B6F100063D8EC /* SubtitleAndIconCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D8FB76E226B6F100063D8EC /* SubtitleAndIconCell.xib */; };
-		8DD50CF02285E92A00098AA3 /* RealmObjectAccessible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD50CEF2285E92A00098AA3 /* RealmObjectAccessible.swift */; };
+		8DD50CF02285E92A00098AA3 /* IPPORepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD50CEF2285E92A00098AA3 /* IPPORepository.swift */; };
 		8DD50CF52289A33800098AA3 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD50CF42289A33800098AA3 /* Int+Extension.swift */; };
 		9173A4B222902180007749F0 /* IPPO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9173A4B122902180007749F0 /* IPPO.swift */; };
 		981A34DF22986BF000D21868 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981A34DE22986BF000D21868 /* Date+Extension.swift */; };
@@ -88,7 +88,7 @@
 		8D8FB76B226B65A60063D8EC /* BugIssueVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BugIssueVC.swift; sourceTree = "<group>"; };
 		8D8FB76D226B6F100063D8EC /* SubtitleAndIconCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleAndIconCell.swift; sourceTree = "<group>"; };
 		8D8FB76E226B6F100063D8EC /* SubtitleAndIconCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubtitleAndIconCell.xib; sourceTree = "<group>"; };
-		8DD50CEF2285E92A00098AA3 /* RealmObjectAccessible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObjectAccessible.swift; sourceTree = "<group>"; };
+		8DD50CEF2285E92A00098AA3 /* IPPORepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPPORepository.swift; sourceTree = "<group>"; };
 		8DD50CF42289A33800098AA3 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		9173A4B122902180007749F0 /* IPPO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPPO.swift; sourceTree = "<group>"; };
 		981A34DE22986BF000D21868 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 			children = (
 				8D8FB763226B0AFD0063D8EC /* GitHubIssue.swift */,
 				8D8FB761226A1AA60063D8EC /* GitHubAPIClient.swift */,
-				8DD50CEF2285E92A00098AA3 /* RealmObjectAccessible.swift */,
+				8DD50CEF2285E92A00098AA3 /* IPPORepository.swift */,
 				9173A4B122902180007749F0 /* IPPO.swift */,
 			);
 			path = Models;
@@ -361,7 +361,7 @@
 				8D8FB76F226B6F100063D8EC /* SubtitleAndIconCell.swift in Sources */,
 				E7D8326F2295939E00FA81DA /* AddTaskCell.swift in Sources */,
 				9173A4B222902180007749F0 /* IPPO.swift in Sources */,
-				8DD50CF02285E92A00098AA3 /* RealmObjectAccessible.swift in Sources */,
+				8DD50CF02285E92A00098AA3 /* IPPORepository.swift in Sources */,
 				8D29221222460A790046917F /* AppDelegate.swift in Sources */,
 				8D0B3A0C22676AF900B71A7C /* GoalSettingVC.swift in Sources */,
 				0BF9DA91228464A70021096A /* CheckButton.swift in Sources */,

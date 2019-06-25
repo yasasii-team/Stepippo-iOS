@@ -2,7 +2,7 @@ import UIKit
 import RealmSwift
 import XLPagerTabStrip
 
-final class StockedIPPOVC: UIViewController, RealmObjectAccessible {
+final class StockedIPPOVC: UIViewController, IPPORepository {
 
     private var stockedIppoList: Results<IPPO>?
     @IBOutlet private weak var tableView: UITableView!
@@ -18,7 +18,7 @@ final class StockedIPPOVC: UIViewController, RealmObjectAccessible {
     }
     
     private func getStockedIppo() {
-        stockedIppoList = fetch(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray: [IPPOStatus.stock.rawValue])).sorted(byKeyPath: "addDateTime", ascending: false)
+        stockedIppoList = fetch(predicate: NSPredicate(format: "_status = %@", argumentArray: [IPPOStatus.stock.rawValue]), sortKeyPath: "addDateTime", ascending: false)
     }
 }
 

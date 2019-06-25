@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ProgVC: UIViewController, RealmObjectAccessible {
+final class ProgVC: UIViewController, IPPORepository {
     
     @IBOutlet private weak var cycleLabel: UILabel!
     
@@ -124,9 +124,9 @@ final class ProgVC: UIViewController, RealmObjectAccessible {
     private func numberOfIPPO() -> String {
         //達成数を取得する
         //未達成の数
-    let numberOfChallengingIPPO = fetch(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray:[IPPOStatus.challenging.rawValue])).count
+    let numberOfChallengingIPPO = fetch(predicate: NSPredicate(format: "_status = %@", argumentArray:[IPPOStatus.challenging.rawValue])).count
         //達成中の数
-    let numberOfPerformedIPPO = fetch(IPPO.self).filter(NSPredicate(format: "_status = %@", argumentArray:[IPPOStatus.performed.rawValue])).count
+    let numberOfPerformedIPPO = fetch(predicate: NSPredicate(format: "_status = %@", argumentArray:[IPPOStatus.performed.rawValue])).count
         //未達成と達成中の数を加算し、挑戦中の数を算出する
     let currentIPPO = numberOfPerformedIPPO + numberOfChallengingIPPO
         

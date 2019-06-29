@@ -18,7 +18,7 @@ final class StockedIPPOVC: UIViewController, IPPORepository {
     }
     
     private func getStockedIppo() {
-        stockedIppoList = fetch(predicate: NSPredicate(format: "_status = %@", argumentArray: [IPPOStatus.stock.rawValue]), sortKeyPath: "addDateTime", ascending: false)
+        stockedIppoList = fetch(predicate: NSPredicate(format: "_status = %@", argumentArray: [IPPOStatus.stock.rawValue]), sortKeyPath: "addDateTime", isAcsending: false)
     }
 }
 

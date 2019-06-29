@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 import XLPagerTabStrip
 
-final class AchievedIPPOVC: UIViewController, RealmObjectAccessible {
+final class AchievedIPPOVC: UIViewController, IPPORepository {
 
     @IBOutlet private weak var tableView: UITableView!
     private var achievedIppoList: Results<IPPO>?
@@ -69,7 +69,7 @@ final class AchievedIPPOVC: UIViewController, RealmObjectAccessible {
     }
     
     private func getAchievedIppo() {
-        achievedIppoList = fetch(IPPO.self, predicate: NSPredicate(format: "_status = %@", argumentArray: [IPPOStatus.achieved.rawValue]))
+        achievedIppoList = fetch(predicate: NSPredicate(format: "_status = %@", argumentArray: [IPPOStatus.achieved.rawValue]))
         
     }
     
